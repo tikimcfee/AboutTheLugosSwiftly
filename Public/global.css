@@ -1,0 +1,24 @@
+.clearfix {
+    content: "";
+    clear: both;
+}
+
+body {
+    background: #121212;
+}
+
+.full-page-header {
+    background: #343434;
+}
+
+.top-level-content-container {
+    background: #223333;
+    width: 67%;
+}
+
+@media only screen and (max-width: 800px) {
+    .top-level-content-container {
+        background-color: #223333;
+        width: 95%;
+    }
+}

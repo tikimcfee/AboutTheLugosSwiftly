@@ -1,10 +1,10 @@
+import Foundation
 import Vapor
 
-// configures your application
-public func configure(_ app: Application) throws {
-    // uncomment to serve files from /Public folder
-    // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
+public func _Vapor_configure(_ app: Application) throws {
+    // Serve files from /Public folder
+    app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
-    // register routes
-    try routes(app)
+
+    try _Vapor_routes(app)
 }

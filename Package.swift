@@ -9,12 +9,18 @@ let package = Package(
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        // HTML DSL BBTTYLLOLKTHXBY
+        .package(name: "Html", url: "https://github.com/pointfreeco/swift-html.git", from: "0.3.1"),
+        // Markdown -> HTML
+        .package(name: "Ink", url: "https://github.com/johnsundell/ink.git", from: "0.5.0")
     ],
     targets: [
         .target(
             name: "App",
             dependencies: [
-                .product(name: "Vapor", package: "vapor")
+                .product(name: "Vapor", package: "vapor"),
+                "Ink",
+                "Html"
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of
