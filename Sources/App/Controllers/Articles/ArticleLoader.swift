@@ -40,8 +40,7 @@ class ArticleLoader {
     private func refreshArticles() {
         vaporApp.logger.info("Starting article lookup")
 
-        (currentArticles, articleLookup) =
-            discoverArticles()
+        (currentArticles, articleLookup) = discoverArticles()
 
         vaporApp.logger.info("Article lookup complete, refreshing in \(refreshTime) seconds")
         loadingQueue.asyncAfter(
@@ -100,16 +99,6 @@ class ArticleLoader {
             vaporApp.logger.report(error: error)
         }
         return false
-    }
-}
-
-private extension URL {
-    func defaultContents() throws -> [URL] {
-        try fileManager.contentsOfDirectory(
-            at: self,
-            includingPropertiesForKeys: nil,
-            options: .skipsHiddenFiles
-        )
     }
 }
 

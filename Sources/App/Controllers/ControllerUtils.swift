@@ -21,3 +21,13 @@ func rootFile(named fileName: String) -> URL {
 func rootSubDirectory(named directoryName: String) -> URL {
     rootPublicResourceDirectory.appendingPathComponent(directoryName, isDirectory: true)
 }
+
+extension URL {
+    func defaultContents() throws -> [URL] {
+        try fileManager.contentsOfDirectory(
+            at: self,
+            includingPropertiesForKeys: nil,
+            options: .skipsHiddenFiles
+        )
+    }
+}

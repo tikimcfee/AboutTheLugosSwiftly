@@ -6,7 +6,7 @@ struct BaseRenderer {
     let vaporApp: Vapor.Application
 
     func renderRoute() -> String {
-        var rootNode = Node.html(
+        let rootNode = Node.html(
             .head(
                 .meta(attributes: [
                     .init("name", "viewport"),
@@ -51,3 +51,24 @@ struct BaseRenderer {
     }
 }
 
+protocol CSSClass {
+    var rawValue: String { get }
+}
+
+enum Shared: String, CSSClass {
+    case navigationBar = "shared-page-navigation-bar"
+    case navigationLink = "shared-page-navigation-link"
+}
+
+enum Other: String, CSSClass {
+    case aboutBody = "about-page-body"
+    case aboutImage = "about-page-image"
+}
+
+extension Array where Element == CSSClass {
+    var all: String {
+        map { $0.rawValue }.joined(separator: ", ")
+    }
+}
+
+let classes: String = [Shared.navigationBar, Shared.navigationLink, Other.aboutBody, Other.aboutImage].all
