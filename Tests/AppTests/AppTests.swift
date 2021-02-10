@@ -1,5 +1,6 @@
 @testable import App
 import XCTVapor
+import CSS
 
 final class AppTests: XCTestCase {
     func testHelloWorld() throws {
@@ -9,4 +10,23 @@ final class AppTests: XCTestCase {
 
         
     }
+	
+	func testParent() {
+		let styles = Stylesheet {
+			Class("hello-world") {
+				background(.red)
+				Parent {
+					Class("blue") {
+						background(.blue)
+						Child {
+							Div { color(.red) }
+							Paragraph { color(.green) }
+						}
+					}
+				}
+
+			}
+		}
+		print(styles.string())
+	}
 }

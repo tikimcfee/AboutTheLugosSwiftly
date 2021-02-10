@@ -12,7 +12,9 @@ let package = Package(
         // HTML DSL BBTTYLLOLKTHXBY
         .package(name: "Html", url: "https://github.com/pointfreeco/swift-html.git", from: "0.3.1"),
         // Markdown -> HTML
-        .package(name: "Ink", url: "https://github.com/johnsundell/ink.git", from: "0.5.0")
+        .package(name: "Ink", url: "https://github.com/johnsundell/ink.git", from: "0.5.0"),
+		// CSS STUFF!
+		.package(name: "CSS", url: "https://github.com/carson-katri/swift-css", .branch("master"))
     ],
     targets: [
         .target(
@@ -20,7 +22,8 @@ let package = Package(
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
                 "Ink",
-                "Html"
+                "Html",
+				"CSS"
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of

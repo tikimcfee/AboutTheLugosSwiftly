@@ -1,6 +1,7 @@
 import Foundation
 import Html
 import Vapor
+import CSS
 
 struct BaseRenderer {
     let vaporApp: Vapor.Application
@@ -16,9 +17,9 @@ struct BaseRenderer {
                 .link(attributes: [.href("global.css"), .rel(.stylesheet)])
 //                .style(unsafe: globalCssData())
             ),
-            .body(
+			.body(attributes: [.class(Shared.pageBody.rawValue)], [
                 .div(
-                    attributes: [.class("root-navigation-bar")],
+					attributes: [.class(Shared.navigationBar.rawValue)],
                     .fragment(links)
                 ),
                 .div(
@@ -27,7 +28,7 @@ struct BaseRenderer {
                         .text("Words go here!")
                     ])
                 )
-            )
+			])
         )
         return render(rootNode)
     }
@@ -53,22 +54,42 @@ struct BaseRenderer {
 
 protocol CSSClass {
     var rawValue: String { get }
+	var block: () -> CSS { get }
+}
+
+extension CSSClass {
+	var select: Select {
+		Class(rawValue, block)
+	}
 }
 
 enum Shared: String, CSSClass {
+	case pageBody = "shared-page-body"
     case navigationBar = "shared-page-navigation-bar"
     case navigationLink = "shared-page-navigation-link"
+	var block: () -> CSS {
+		switch self {
+			case .navigationBar: return {
+				background(Color.hex(0xff0000))
+			}
+			case .navigationLink: return {
+				background(Color.rgb(10, 10, 10,alpha: 10))
+			}
+			case .pageBody: return {
+				width(.percent(67))
+			}
+		}
+	}
 }
 
-enum Other: String, CSSClass {
-    case aboutBody = "about-page-body"
-    case aboutImage = "about-page-image"
-}
+//enum Other: String, CSSClass {
+//    case aboutBody = "about-page-body"
+//    case aboutImage = "about-page-image"
+//}
+//
+//extension Array where Element == CSSClass {
+//    var all: String {
+//        map { $0.rawValue }.joined(separator: ", ")
+//    }
+//}
 
-extension Array where Element == CSSClass {
-    var all: String {
-        map { $0.rawValue }.joined(separator: ", ")
-    }
-}
-
-let classes: String = [Shared.navigationBar, Shared.navigationLink, Other.aboutBody, Other.aboutImage].all

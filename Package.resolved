@@ -74,6 +74,15 @@
         }
       },
       {
+        "package": "CSS",
+        "repositoryURL": "https://github.com/carson-katri/swift-css",
+        "state": {
+          "branch": "master",
+          "revision": "3ce8fe5662a6c161d2d0737e60a8cbb752b4de25",
+          "version": null
+        }
+      },
+      {
         "package": "Html",
         "repositoryURL": "https://github.com/pointfreeco/swift-html.git",
         "state": {
