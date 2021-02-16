@@ -1,11 +1,11 @@
 import Vapor
 
-public class VaporRouteRenderer {
+public class VaporRouteRenderingContainer {
 
     let vaporApp: Application
 
-    lazy var baseRenderer: BaseRenderer = {
-        BaseRenderer(vaporApp: vaporApp)
+    lazy var baseRenderer: SharedPageComponentsRenderer = {
+        SharedPageComponentsRenderer(vaporApp: vaporApp)
     }()
 
     public init(vaporApp: Application) {
@@ -24,6 +24,16 @@ public class VaporRouteRenderer {
                 .renderRoute()
                 .asHtmlResponse
         }
+        vaporApp.get("one") { _ in
+            "one"
+        }
+        vaporApp.get("two") { _ in
+            "two"
+        }
+        vaporApp.get("three") { _ in
+            "three"
+        }
+
     }
 
 }

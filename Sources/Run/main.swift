@@ -10,6 +10,6 @@ defer {
     _Vapor_app.shutdown()
 }
 
-let renderer = VaporRouteRenderer(vaporApp: _Vapor_app)
+let renderer = VaporRouteRenderingContainer(vaporApp: _Vapor_app)
 
 try _Vapor_app.run()

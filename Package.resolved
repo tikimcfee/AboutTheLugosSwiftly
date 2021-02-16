@@ -75,10 +75,10 @@
       },
       {
         "package": "CSS",
-        "repositoryURL": "https://github.com/carson-katri/swift-css",
+        "repositoryURL": "https://github.com/tikimcfee/swift-css",
         "state": {
           "branch": "master",
-          "revision": "3ce8fe5662a6c161d2d0737e60a8cbb752b4de25",
+          "revision": "03e22c1d236d8db079af883b05f6fa7c390b3f4c",
           "version": null
         }
       },
@@ -168,8 +168,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "bb87dcff4cf6d86d386308b4cb1393cefa4891a4",
-          "version": "4.39.2"
+          "revision": "e3fe4fdae3aea4c5638bddbea9d038f8d13792ca",
+          "version": "4.40.0"
         }
       },
       {

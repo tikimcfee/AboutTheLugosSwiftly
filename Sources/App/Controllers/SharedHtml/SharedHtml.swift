@@ -3,7 +3,7 @@ import Html
 import Vapor
 import CSS
 
-struct BaseRenderer {
+struct SharedPageComponentsRenderer {
     let vaporApp: Vapor.Application
 
     func renderRoute() -> String {
@@ -14,16 +14,15 @@ struct BaseRenderer {
                     .content("width=device-width, initial-scale=1.0"),
                     .charset(.utf8)
                 ]),
-                .link(attributes: [.href("global.css"), .rel(.stylesheet)])
-//                .style(unsafe: globalCssData())
+//                .link(attributes: [.href("global.css"), .rel(.stylesheet)]),
+                .style(unsafe: bodyCss.string())
             ),
-			.body(attributes: [.class(Shared.pageBody.rawValue)], [
-                .div(
-					attributes: [.class(Shared.navigationBar.rawValue)],
+            .body([
+                .div(attributes: [.class(BodyNames.navigationContainer.rawValue)],
                     .fragment(links)
                 ),
                 .div(
-                    attributes: [.class("top-level-content-container")],
+                    attributes: [.class(BodyNames.contentContainer.rawValue)],
                     .fragment([
                         .text("Words go here!")
                     ])
@@ -35,9 +34,9 @@ struct BaseRenderer {
 
     var links: [Node] {
         [
-            .a(attributes: [.href("one")], .text("One")),
-            .a(attributes: [.href("two")], .text("Two")),
-            .a(attributes: [.href("three")], .text("Thr33ls")),
+            .a(attributes: [.href("one")], .span("A First Link")),
+            .a(attributes: [.href("two")], .span("A Second Link")),
+            .a(attributes: [.href("three")], .span("A Third Link")),
         ]
     }
 
@@ -52,44 +51,106 @@ struct BaseRenderer {
     }
 }
 
-protocol CSSClass {
-    var rawValue: String { get }
-	var block: () -> CSS { get }
+struct ColorPalette {
+    struct Root {
+        static let siteBackground = Color.black
+    }
+    struct NavigationBar {
+        static let background = Color.rgba(24, 24, 48, 1.0)
+        static let linkText = Color.grey
+        static let linkTextHover = Color.white
+        static let linkTextVisited = Color.peachpuff
+    }
+    struct Content {
+        static let background = Color.rgba(24, 48, 96, 1.0)
+        static let text = Color.grey
+    }
 }
 
-extension CSSClass {
-	var select: Select {
-		Class(rawValue, block)
-	}
+var sidebarHeightWide = CSSUnit.percent(100)
+var sidebarWidthWide = CSSUnit.pixels(212)
+var contentWidthWide = CSSUnit.percent(90)
+
+var sidebarHeightThin = CSSUnit.auto
+var sidebarWidthThin = CSSUnit.percent(100)
+var contentWidthThin = CSSUnit.percent(100)
+
+var bodyCss = Stylesheet {
+    Html {
+        height(.percent(100))
+        width(.percent(100))
+        margin(.pixels(0))
+        padding(.pixels(0))
+
+        font(.family("Arial"))
+        color(.hex(0xCCCCCC))
+    }
+
+    Body {
+        background(ColorPalette.Root.siteBackground)
+        height(.percent(100))
+        width(.percent(100))
+        margin(.pixels(0))
+        padding(.pixels(0))
+    }
+
+    Class(BodyNames.navigationContainer.rawValue) {
+        background(ColorPalette.NavigationBar.background)
+        height(sidebarHeightWide)
+        width(sidebarWidthWide)
+        margin(.pixels(0))
+        padding(.pixels(0))
+        position(.fixed)
+
+        overflow(.auto)
+
+        Anchor {
+            color(ColorPalette.NavigationBar.linkText)
+            display(.block)
+            textDecoration(.none)
+            margin(.pixels(8))
+        }
+
+        Anchor {
+            color(ColorPalette.NavigationBar.linkTextHover)
+            textDecoration(.underline)
+        }.pseudo(.hover)
+
+        Anchor {
+            color(ColorPalette.NavigationBar.linkTextVisited)
+        }.pseudo(.visited)
+    }
+
+    Class(BodyNames.contentContainer.rawValue) {
+        margin([.left], sidebarWidthWide)
+        padding(.pixels(8))
+
+        background(ColorPalette.Content.background)
+    }
+
+    Group {
+        Class(BodyNames.navigationContainer.rawValue) {
+            width(sidebarWidthThin)
+            height(sidebarHeightThin)
+            position(.relative)
+            Anchor {
+                float(.left)
+            }
+        }
+        Class(BodyNames.contentContainer.rawValue) {
+            width(contentWidthThin)
+            margin([.left], .pixels(0))
+        }
+    }.when(.screen, .maxWidth(.pixels(800)))
 }
 
-enum Shared: String, CSSClass {
-	case pageBody = "shared-page-body"
-    case navigationBar = "shared-page-navigation-bar"
-    case navigationLink = "shared-page-navigation-link"
-	var block: () -> CSS {
-		switch self {
-			case .navigationBar: return {
-				background(Color.hex(0xff0000))
-			}
-			case .navigationLink: return {
-				background(Color.rgb(10, 10, 10,alpha: 10))
-			}
-			case .pageBody: return {
-				width(.percent(67))
-			}
-		}
-	}
+enum BodyNames: String, CSSClass, CaseIterable {
+    case navigationContainer = "body-navigation-container"
+    case contentContainer = "body-content-container"
+    case root = "body-root"
 }
 
-//enum Other: String, CSSClass {
-//    case aboutBody = "about-page-body"
-//    case aboutImage = "about-page-image"
-//}
-//
-//extension Array where Element == CSSClass {
-//    var all: String {
-//        map { $0.rawValue }.joined(separator: ", ")
-//    }
-//}
-
+enum NavigationBarNames: String, CSSClass, CaseIterable {
+    case root = "navigation-bar-root"
+    case link = "navigation-bar-link"
+}

@@ -6,27 +6,24 @@ final class AppTests: XCTestCase {
     func testHelloWorld() throws {
         let app = Application(.testing)
         defer { app.shutdown() }
-        let renderer = VaporRouteRenderer(vaporApp: app)
-
-        
+        _ = VaporRouteRenderingContainer(vaporApp: app)
     }
 	
 	func testParent() {
-		let styles = Stylesheet {
-			Class("hello-world") {
-				background(.red)
-				Parent {
-					Class("blue") {
-						background(.blue)
-						Child {
-							Div { color(.red) }
-							Paragraph { color(.green) }
-						}
-					}
-				}
-
-			}
-		}
+		let styles = Class(BodyNames.navigationContainer.rawValue) {
+            float(.left)
+            width(.percent(10))
+            display(.inlineBlock)
+            justifyContent(.flexStart)
+            Anchor {
+                textDecoration(.none)
+                color(ColorPalette.NavigationBar.linkText)
+            }
+            Anchor {
+                textDecoration(.underline)
+                color(ColorPalette.NavigationBar.linkTextHover)
+            }.pseudo(.hover)
+        }
 		print(styles.string())
 	}
 }

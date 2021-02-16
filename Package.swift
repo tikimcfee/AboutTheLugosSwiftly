@@ -14,7 +14,8 @@ let package = Package(
         // Markdown -> HTML
         .package(name: "Ink", url: "https://github.com/johnsundell/ink.git", from: "0.5.0"),
 		// CSS STUFF!
-		.package(name: "CSS", url: "https://github.com/carson-katri/swift-css", .branch("master"))
+        .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master"))
+//		.package(name: "CSS", url: "https://github.com/carson-katri/swift-css", .branch("master"))
     ],
     targets: [
         .target(
