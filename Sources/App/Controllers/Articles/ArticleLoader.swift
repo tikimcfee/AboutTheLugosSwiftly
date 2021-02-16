@@ -93,6 +93,7 @@ class ArticleLoader {
             if let file = try state.makeArticleFile() {
                 list.append(file)
                 index[file.meta.id] = file
+                vaporApp.logger.info("New article: [\(file.meta.id)] \(file.meta.name)")
                 return true
             }
         } catch {

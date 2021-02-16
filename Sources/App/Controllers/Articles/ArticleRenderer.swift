@@ -19,4 +19,18 @@ struct ArticleRenderer {
             vaporApp.logger.report(error: error)
         }
     }
+
+    func render(articleId: String) -> String? {
+        guard let article = loader.articleLookup[articleId]
+        else { return nil }
+
+        do {
+            let rawArticle = try article.articleContents()
+            let markdown = parser.html(from: rawArticle)
+            return markdown
+        } catch {
+            vaporApp.logger.report(error: error)
+            return nil
+        }
+    }
 }
