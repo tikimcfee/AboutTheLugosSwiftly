@@ -52,51 +52,100 @@ public class VaporRouteRenderingContainer {
             FileMiddleware(publicDirectory: vaporApp.directory.publicDirectory)
         )
 
-        vaporApp.get(AppRoutes.root.path) { _ in
-            ""
+        vaporApp.get(.catchall) { req in
+            req.redirect(to: AppRoutes.root.absolute)
+        }
+
+        vaporApp.get(AppRoutes.root.path) { req in
+            req.backgrounded {
+                self.loadHome(req)
+            }
+        }
+
+        vaporApp.get(AppRoutes.about.path) { req in
+            req.backgrounded {
+                self.loadAbout(req)
+            }
         }
 
         vaporApp.get([AppRoutes.articles.path]) { req in
-            req.application.threadPool.runIfActive(eventLoop: req.eventLoop) {
+            req.backgrounded {
                 self.loadArticleList(req)
             }
         }
 
         vaporApp.get([AppRoutes.articles.path, ":id"]) { req in
-            req.application.threadPool.runIfActive(eventLoop: req.eventLoop) {
+            req.backgrounded {
                 self.loadArticle(req)
             }
         }
     }
 
-    private func articlePath(_ id: String) -> String {
-        return AppRoutes.articles.absolute + "/" + id
+    private func loadHome(_ req: Request) -> Response {
+        return baseRenderer.renderRouteWith {
+            [.raw("Hello, world!")]
+        }.asHtmlResponse
+    }
+
+    private func loadAbout(_ req: Request) -> Response {
+        do {
+            let aboutFile = rawFile(named: "about.md")
+            let aboutContents = try String(contentsOf: aboutFile)
+            let aboutMarkdown = markdownParser.html(from: aboutContents)
+
+            return baseRenderer.renderRouteWith{[
+                .raw(aboutMarkdown)
+            ]}.asHtmlResponse
+        } catch {
+            return req.redirect(to: AppRoutes.root.rawValue)
+        }
     }
 
     private func loadArticleList(_ req: Request) -> Response {
-        let articleLinks = articleLoader.currentArticles.map { item in
-            ChildOf<Tag.Ol>.li([
-                .a(attributes: [.href(articlePath(item.meta.id))], .span(.text(item.meta.name)))
-            ])
-        }
-
-        return baseRenderer.renderRouteWith {[
-            Node.ol(
-                .fragment(articleLinks)
+        let orderedList = Node.ol(
+            .fragment(
+                articleLoader.currentArticles.map { article in
+                    article.listItem
+                }
             )
+        )
+        return baseRenderer.renderRouteWith {[
+            orderedList
         ]}.asHtmlResponse
     }
 
     private func loadArticle(_ req: Request) -> Response {
-        guard let id = req.parameters.get("id"),
-              let parsed = articleRenderer.render(articleId: id)
-        else {
+        guard let id = req.parameters.get("id") else {
             return req.redirect(to: AppRoutes.root.rawValue)
         }
-
+        let markdownHtml = articleRenderer.render(articleId: id)
         return baseRenderer.renderRouteWith {
-            [.raw(parsed)]
+            [.raw(markdownHtml)]
         }.asHtmlResponse
+    }
+}
+
+private extension Request {
+    func backgrounded(
+        _ operation: @escaping () throws -> Response
+    ) -> EventLoopFuture<Response> {
+        application.threadPool.runIfActive(eventLoop: eventLoop) {
+            try operation()
+        }
+    }
+}
+
+private extension ArticleFile {
+    private var articlePath: String {
+        AppRoutes.articles.absolute + "/" + meta.id
+    }
+
+    var listItem: ChildOf<Tag.Ol> {
+        .li([htmlLink])
+    }
+
+    var htmlLink: Node {
+        .a(attributes: [.href(articlePath)], .span(.text(meta.name)))
     }
 }
 
@@ -106,7 +155,7 @@ private extension String {
     }
 }
 
-class HTMLResponse {
+private class HTMLResponse {
     static func headers() -> HTTPHeaders {
         var headers = HTTPHeaders()
         headers.add(name: .contentType, value: "text/html")

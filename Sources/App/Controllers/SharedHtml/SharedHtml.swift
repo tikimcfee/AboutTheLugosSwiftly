@@ -17,13 +17,15 @@ struct HTMLRenderer {
 
     private func renderContentWith(builder: NodesBuilder) -> ChildOf<Tag.Html> {
         .body([
-            .div(attributes: [.class(BodyNames.navigationContainer.rawValue)],
-                .fragment(links)
-            ),
-            .div(
-                attributes: [.class(BodyNames.contentContainer.rawValue)],
-                .fragment(builder())
-            )
+            .div(attributes: [.class(RootNames.bodyContainer.rawValue)], [
+                .div(attributes: [.class(BodyNames.navigationContainer.rawValue)],
+                    .fragment(links)
+                ),
+                .div(
+                    attributes: [.class(BodyNames.contentContainer.rawValue)],
+                    .fragment(builder())
+                )
+            ])
         ])
     }
 
@@ -50,14 +52,6 @@ struct ColorPalette {
     }
 }
 
-private var sidebarHeightWide = CSSUnit.percent(100)
-private var sidebarWidthWide = CSSUnit.pixels(212)
-private var contentWidthWide = CSSUnit.percent(90)
-
-private var sidebarHeightThin = CSSUnit.auto
-private var sidebarWidthThin = CSSUnit.percent(100)
-private var contentWidthThin = CSSUnit.percent(100)
-
 private class DefaultCaches {
     static var sharedHead: ChildOf<Tag.Html> = {
         .head(
@@ -81,6 +75,22 @@ private class DefaultCaches {
                 color(.hex(0xCCCCCC))
             }
 
+            Anchor {
+                color(ColorPalette.NavigationBar.linkText)
+                display(.block)
+                textDecoration(.none)
+                margin(.pixels(8))
+            }
+
+            Anchor {
+                color(ColorPalette.NavigationBar.linkTextHover)
+                textDecoration(.underline)
+            }.pseudo(.hover)
+
+            Anchor {
+                color(ColorPalette.NavigationBar.linkTextVisited)
+            }.pseudo(.visited)
+
             Body {
                 background(ColorPalette.Root.siteBackground)
                 height(.percent(100))
@@ -89,55 +99,49 @@ private class DefaultCaches {
                 padding(.pixels(0))
             }
 
+            Class(RootNames.bodyContainer.rawValue) {
+                padding(.pixels(8))
+            }
+
             Class(BodyNames.navigationContainer.rawValue) {
                 background(ColorPalette.NavigationBar.background)
-                height(sidebarHeightWide)
-                width(sidebarWidthWide)
+                height(.percent(40))
+                width(.pixels(196))
                 margin(.pixels(0))
                 padding(.pixels(0))
                 position(.fixed)
-
-                overflow(.auto)
-
-                Anchor {
-                    color(ColorPalette.NavigationBar.linkText)
-                    display(.block)
-                    textDecoration(.none)
-                    margin(.pixels(8))
-                }
-
-                Anchor {
-                    color(ColorPalette.NavigationBar.linkTextHover)
-                    textDecoration(.underline)
-                }.pseudo(.hover)
-
-                Anchor {
-                    color(ColorPalette.NavigationBar.linkTextVisited)
-                }.pseudo(.visited)
             }
 
             Class(BodyNames.contentContainer.rawValue) {
                 background(ColorPalette.Content.background)
-                margin([.left], sidebarWidthWide)
+                display(.flex)
+                flexDirection(.column)
+                margin([.left], .pixels(204))
                 padding(.pixels(8))
             }
 
             Group {
+                Class(RootNames.bodyContainer.rawValue) {
+                    padding(.pixels(0))
+                }
                 Class(BodyNames.navigationContainer.rawValue) {
-                    width(sidebarWidthThin)
-                    height(sidebarHeightThin)
+                    width(.percent(100))
+                    height(.percent(8))
                     position(.relative)
                     Anchor {
                         float(.left)
                     }
                 }
                 Class(BodyNames.contentContainer.rawValue) {
-                    width(contentWidthThin)
                     margin([.left], .pixels(0))
                 }
             }.when(.screen, .maxWidth(.pixels(800)))
         }
     }()
+}
+
+enum RootNames: String, CSSClass, CaseIterable {
+    case bodyContainer = "root-body-container"
 }
 
 enum BodyNames: String, CSSClass, CaseIterable {

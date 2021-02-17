@@ -1,10 +1,12 @@
 import Foundation
-
+import Ink
 
 let jsonDecoder: JSONDecoder = {
     var decoder = JSONDecoder()
     return decoder
 }()
+
+let markdownParser = MarkdownParser()
 
 // MARK: - File Operations
 let fileManager = FileManager.default
@@ -30,4 +32,10 @@ extension URL {
             options: .skipsHiddenFiles
         )
     }
+}
+
+// MARK: - Raw
+func rawFile(named name: String) -> URL {
+    rootSubDirectory(named: "raw")
+        .appendingPathComponent(name)
 }
