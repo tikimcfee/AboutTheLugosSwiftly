@@ -1,4 +1,5 @@
 import Vapor
+import Html
 
 enum AppRoutes: String, CustomStringConvertible {
     case root = ""
@@ -29,20 +30,19 @@ enum AppRoutes: String, CustomStringConvertible {
 
 public class VaporRouteRenderingContainer {
 
-    let vaporApp: Application
+    let vaporApp: Vapor.Application
 
     lazy var baseRenderer: HTMLRenderer = {
         HTMLRenderer(vaporApp: vaporApp)
     }()
 
+    let articleLoader: ArticleLoader
     let articleRenderer: ArticleRenderer
 
-    public init(vaporApp: Application) {
+    public init(vaporApp: Vapor.Application) {
         self.vaporApp = vaporApp
-        self.articleRenderer = ArticleRenderer(
-            vaporApp: vaporApp,
-            loader: ArticleLoader(vaporApp: vaporApp)
-        )
+        self.articleLoader = ArticleLoader(vaporApp: vaporApp)
+        self.articleRenderer = ArticleRenderer(vaporApp: vaporApp, loader: articleLoader)
 
         buildRoutes()
     }
@@ -57,7 +57,9 @@ public class VaporRouteRenderingContainer {
         }
 
         vaporApp.get([AppRoutes.articles.path]) { req in
-            ""
+            req.application.threadPool.runIfActive(eventLoop: req.eventLoop) {
+                self.loadArticleList(req)
+            }
         }
 
         vaporApp.get([AppRoutes.articles.path, ":id"]) { req in
@@ -65,6 +67,24 @@ public class VaporRouteRenderingContainer {
                 self.loadArticle(req)
             }
         }
+    }
+
+    private func articlePath(_ id: String) -> String {
+        return AppRoutes.articles.absolute + "/" + id
+    }
+
+    private func loadArticleList(_ req: Request) -> Response {
+        let articleLinks = articleLoader.currentArticles.map { item in
+            ChildOf<Tag.Ol>.li([
+                .a(attributes: [.href(articlePath(item.meta.id))], .span(.text(item.meta.name)))
+            ])
+        }
+
+        return baseRenderer.renderRouteWith {[
+            Node.ol(
+                .fragment(articleLinks)
+            )
+        ]}.asHtmlResponse
     }
 
     private func loadArticle(_ req: Request) -> Response {
