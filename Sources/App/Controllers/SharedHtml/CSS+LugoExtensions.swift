@@ -1,4 +1,3 @@
-import Foundation
 import CSS
 
 protocol CSSClass {
@@ -34,6 +33,26 @@ public struct Anchor: CSSSelector {
     public init() { }
 }
 
+
+public struct Preformatted: CSSSelector {
+    public var selector = "pre"
+    public var children: [CSS] = []
+    public init() { }
+}
+
+extension CSSSelector {
+    func webkitScrollbar() -> CSSSelector {
+        Select(selector + "::-webkit-scrollbar", children)
+    }
+    func webkitScrollbarTrack() -> CSSSelector {
+        Select(selector + "::-webkit-scrollbar-track", children)
+    }
+    func webkitScrollbarThumb() -> CSSSelector {
+        Select(selector + "::-webkit-scrollbar-thumb", children)
+    }
+}
+
+
 func float(_ side: Side) -> Declaration {
     Declaration(property: .float, value: side.rawValue)
 }
@@ -52,4 +71,12 @@ func borderBoxSizing() -> Declaration {
 
 func sidePositioning(_ side: Side, _ amount: CSSUnit) -> Declaration {
     Declaration(property: side.prop, value: amount.description)
+}
+
+func scrollbarWidth(_ amount: CSSUnit, _ keyword: String) -> Declaration {
+    Declaration(property: .scrollbarWidth, value: keyword)
+}
+
+func scrollbarColor(_ colorThumb: Color, _ colorTrack: Color) -> Declaration {
+    Declaration(property: .scrollbarColor, value: "\(colorThumb.description) \(colorTrack.description)")
 }
