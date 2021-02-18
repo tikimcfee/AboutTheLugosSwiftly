@@ -44,7 +44,12 @@ public class VaporRouteRenderingContainer {
         self.articleLoader = ArticleLoader(vaporApp: vaporApp)
         self.articleRenderer = ArticleRenderer(vaporApp: vaporApp, loader: articleLoader)
 
+        configureServer()
         buildRoutes()
+    }
+
+    func configureServer() {
+        vaporApp.http.server.configuration.hostname = "0.0.0.0"
     }
 
     func buildRoutes() {

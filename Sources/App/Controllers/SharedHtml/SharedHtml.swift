@@ -39,16 +39,18 @@ struct HTMLRenderer {
 struct ColorPalette {
     struct Root {
         static let siteBackground = Color.black
+        static let text = Color.rgba(204, 204, 204, 1)
     }
     struct NavigationBar {
-        static let background = Color.rgba(24, 24, 48, 1.0)
+        static let background = Color.rgba(24, 48, 96, 1.0)
         static let linkText = Color.grey
         static let linkTextHover = Color.white
         static let linkTextVisited = Color.peachpuff
     }
     struct Content {
-        static let background = Color.rgba(24, 48, 96, 1.0)
+        static let background = Color.rgba(24, 24, 48, 1.0)
         static let text = Color.grey
+        static let preBody = Color.rgba(0, 0, 0, 0.66)
     }
 }
 
@@ -72,24 +74,8 @@ private class DefaultCaches {
                 padding(.pixels(0))
 
                 font(.family("Arial"))
-                color(.hex(0xCCCCCC))
+                color(ColorPalette.Root.text)
             }
-
-            Anchor {
-                color(ColorPalette.NavigationBar.linkText)
-                display(.block)
-                textDecoration(.none)
-                margin(.pixels(8))
-            }
-
-            Anchor {
-                color(ColorPalette.NavigationBar.linkTextHover)
-                textDecoration(.underline)
-            }.pseudo(.hover)
-
-            Anchor {
-                color(ColorPalette.NavigationBar.linkTextVisited)
-            }.pseudo(.visited)
 
             Body {
                 background(ColorPalette.Root.siteBackground)
@@ -97,6 +83,12 @@ private class DefaultCaches {
                 width(.percent(100))
                 margin(.pixels(0))
                 padding(.pixels(0))
+
+                Preformatted {
+                    overflow(x: .auto)
+                    padding(.pixels(8))
+                    background(ColorPalette.Content.preBody)
+                }
             }
 
             Class(RootNames.bodyContainer.rawValue) {
@@ -110,6 +102,22 @@ private class DefaultCaches {
                 margin(.pixels(0))
                 padding(.pixels(0))
                 position(.fixed)
+
+                Anchor {
+                    color(ColorPalette.NavigationBar.linkText)
+                    display(.block)
+                    textDecoration(.none)
+                    margin(.pixels(8))
+                }
+
+                Anchor {
+                    color(ColorPalette.NavigationBar.linkTextHover)
+                    textDecoration(.underline)
+                }.pseudo(.hover)
+
+                Anchor {
+                    color(ColorPalette.NavigationBar.linkTextVisited)
+                }.pseudo(.visited)
             }
 
             Class(BodyNames.contentContainer.rawValue) {
@@ -154,3 +162,18 @@ enum NavigationBarNames: String, CSSClass, CaseIterable {
     case root = "navigation-bar-root"
     case link = "navigation-bar-link"
 }
+
+// Scrollbars, how do they even work
+//Body {
+//
+//}.webkitScrollbar()
+//
+//Body {
+//    background(Color.red)
+//}.webkitScrollbarTrack()
+//
+//Body {
+//    background(Color.blue)
+//    borderRadius(.pixels(8))
+//    border(Color.green, .pixels(5), .solid)
+//}.webkitScrollbarThumb()
