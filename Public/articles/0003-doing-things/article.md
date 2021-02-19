@@ -1,7 +1,5 @@
 # So here's what I know
 
-https://ericdraken.com/individually-styled-markdown-elements/
-
 * The Raspberry Pi should be the thing I host these articles on for a while.
 * The Pi will directly wired in to the local network, and be forwarded through a router (or two).
 * The Pi should supports HTTPS insofar as it is possible to implement to reasonable standards.
@@ -9,15 +7,14 @@ https://ericdraken.com/individually-styled-markdown-elements/
 * I should document everything I do that does something.
 * Or doesn't.
 
-> Quick shortcut for the links on the page
->
-> [LetsEncrypt](https://letsencrypt.org/)
-> [CertBot, Root](https://certbot.eff.org/)
-> [CertBot, Intro docs](https://certbot.eff.org/docs/intro.html)  
-> [Javalin](https://javalin.io/)
-> [Forbidden Oracle Keytool Tutorial](https://docs.oracle.com/cd/E35976_01/server.740/es_admin/src/tadm_ssl_convert_pem_to_jks.html)
-> [More Keytool Magiks](https://www.thesslstore.com/knowledgebase/ssl-install/jetty-java-http-servlet-webserver-ssl-installation/)
->
+Quick shortcut for the links on the page
+
+* [LetsEncrypt](https://letsencrypt.org/)
+* [CertBot, Root](https://certbot.eff.org/)
+* [CertBot, Intro docs](https://certbot.eff.org/docs/intro.html)  
+* [Javalin](https://javalin.io/)
+* [Forbidden Oracle Keytool Tutorial](https://docs.oracle.com/cd/E35976_01/server.740/es_admin/src/tadm_ssl_convert_pem_to_jks.html)
+* [More Keytool Magiks](https://www.thesslstore.com/knowledgebase/ssl-install/jetty-java-http-servlet-webserver-ssl-installation/)
 
 ```shell script
 # I used these to do the stuff on this page

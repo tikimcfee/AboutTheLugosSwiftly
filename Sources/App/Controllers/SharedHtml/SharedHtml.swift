@@ -88,8 +88,25 @@ private class DefaultCaches {
                     overflow(x: .auto)
                     padding(.pixels(8))
                     background(ColorPalette.Content.preBody)
+
+                    border(ColorPalette.Content.preBody, .pixels(2), .solid)
+                    borderRadius(.pixels(8))
                 }
             }
+
+            Anchor {
+                color(ColorPalette.NavigationBar.linkText)
+                textDecoration(.none)
+            }
+
+            Anchor {
+                color(ColorPalette.NavigationBar.linkTextHover)
+                textDecoration(.underline)
+            }.pseudo(.hover)
+
+            Anchor {
+                color(ColorPalette.NavigationBar.linkTextVisited)
+            }.pseudo(.visited)
 
             Class(RootNames.bodyContainer.rawValue) {
                 padding(.pixels(8))
@@ -103,29 +120,25 @@ private class DefaultCaches {
                 padding(.pixels(0))
                 position(.fixed)
 
+                border(ColorPalette.NavigationBar.background, .pixels(2), .solid)
+                borderRadius(.pixels(8))
+
                 Anchor {
-                    color(ColorPalette.NavigationBar.linkText)
                     display(.block)
-                    textDecoration(.none)
-                    margin(.pixels(8))
+                    margin(.pixels(0))
+                    padding(.pixels(8))
                 }
-
-                Anchor {
-                    color(ColorPalette.NavigationBar.linkTextHover)
-                    textDecoration(.underline)
-                }.pseudo(.hover)
-
-                Anchor {
-                    color(ColorPalette.NavigationBar.linkTextVisited)
-                }.pseudo(.visited)
             }
 
             Class(BodyNames.contentContainer.rawValue) {
                 background(ColorPalette.Content.background)
                 display(.flex)
                 flexDirection(.column)
-                margin([.left], .pixels(204))
+                margin([.left], .pixels(208))
                 padding(.pixels(8))
+
+                border(ColorPalette.Content.background, .pixels(2), .solid)
+                borderRadius(.pixels(8))
             }
 
             Group {
@@ -136,12 +149,15 @@ private class DefaultCaches {
                     width(.percent(100))
                     height(.percent(8))
                     position(.relative)
+                    border(ColorPalette.Content.background, .pixels(0), .none)
+                    borderRadius(.pixels(0))
                     Anchor {
                         float(.left)
                     }
                 }
                 Class(BodyNames.contentContainer.rawValue) {
                     margin([.left], .pixels(0))
+                    borderRadius(.pixels(0))
                 }
             }.when(.screen, .maxWidth(.pixels(800)))
         }
