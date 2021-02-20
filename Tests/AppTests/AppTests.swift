@@ -1,6 +1,7 @@
 @testable import App
 import XCTVapor
 import CSS
+import StylesData
 
 final class AppTests: XCTestCase {
     func testHelloWorld() throws {

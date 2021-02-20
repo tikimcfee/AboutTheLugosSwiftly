@@ -1,10 +1,10 @@
 import CSS
 
-protocol CSSClass {
+public protocol CSSClass {
     var rawValue: String { get }
 }
 
-extension Side {
+public extension Side {
     var prop: CSSProperty {
         switch self {
         case .top: return .top
@@ -15,7 +15,7 @@ extension Side {
     }
 }
 
-enum Position: String {
+public enum Position: String {
     case absolute
     case relative
     case fixed
@@ -40,7 +40,7 @@ public struct Preformatted: CSSSelector {
     public init() { }
 }
 
-extension CSSSelector {
+public extension CSSSelector {
     func webkitScrollbar() -> CSSSelector {
         Select(selector + "::-webkit-scrollbar", children)
     }
@@ -53,30 +53,30 @@ extension CSSSelector {
 }
 
 
-func float(_ side: Side) -> Declaration {
+public func float(_ side: Side) -> Declaration {
     Declaration(property: .float, value: side.rawValue)
 }
 
-func position(_ position: Position) -> Declaration {
+public func position(_ position: Position) -> Declaration {
     Declaration(property: .position , value: position.rawValue)
 }
 
-func clearfixContent() -> Declaration {
+public func clearfixContent() -> Declaration {
     Declaration(property: .content , value: "")
 }
 
-func borderBoxSizing() -> Declaration {
+public func borderBoxSizing() -> Declaration {
     Declaration(property: .boxSizing, value: "border-box")
 }
 
-func sidePositioning(_ side: Side, _ amount: CSSUnit) -> Declaration {
+public func sidePositioning(_ side: Side, _ amount: CSSUnit) -> Declaration {
     Declaration(property: side.prop, value: amount.description)
 }
 
-func scrollbarWidth(_ amount: CSSUnit, _ keyword: String) -> Declaration {
+public func scrollbarWidth(_ amount: CSSUnit, _ keyword: String) -> Declaration {
     Declaration(property: .scrollbarWidth, value: keyword)
 }
 
-func scrollbarColor(_ colorThumb: Color, _ colorTrack: Color) -> Declaration {
+public func scrollbarColor(_ colorThumb: Color, _ colorTrack: Color) -> Declaration {
     Declaration(property: .scrollbarColor, value: "\(colorThumb.description) \(colorTrack.description)")
 }

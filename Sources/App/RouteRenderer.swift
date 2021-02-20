@@ -1,5 +1,8 @@
 import Vapor
 import Html
+import StylesData
+import Filesystem
+ 
 
 enum AppRoutes: String, CustomStringConvertible {
     case root = ""
@@ -49,7 +52,18 @@ public class VaporRouteRenderingContainer {
     }
 
     func configureServer() {
-        vaporApp.http.server.configuration.hostname = "0.0.0.0"
+//        vaporApp.http.server.configuration.hostname = "0.0.0.0"
+        generateAssets()
+    }
+
+    func generateAssets() {
+        vaporApp.logger.info("Generating assets..")
+        do {
+            try AssetWriter.writeAllAssets()
+            vaporApp.logger.info("assets done")
+        } catch {
+            vaporApp.logger.report(error: error)
+        }
     }
 
     func buildRoutes() {

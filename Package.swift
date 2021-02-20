@@ -1,4 +1,5 @@
 // swift-tools-version:5.2
+
 import PackageDescription
 
 let package = Package(
@@ -15,16 +16,25 @@ let package = Package(
         .package(name: "Ink", url: "https://github.com/johnsundell/ink.git", from: "0.5.0"),
 		// CSS STUFF!
         .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master"))
-//		.package(name: "CSS", url: "https://github.com/carson-katri/swift-css", .branch("master"))
     ],
     targets: [
+        .target(
+            name: "StylesData",
+            dependencies: [
+                "Ink",
+                "Html",
+                "CSS"
+            ]
+        ),
+        .target(
+            name: "Filesystem"
+        ),
         .target(
             name: "App",
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
-                "Ink",
-                "Html",
-				"CSS"
+                .target(name: "StylesData"),
+                .target(name: "Filesystem")
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of
@@ -33,10 +43,25 @@ let package = Package(
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
             ]
         ),
-        .target(name: "Run", dependencies: [.target(name: "App")]),
-        .testTarget(name: "AppTests", dependencies: [
-            .target(name: "App"),
-            .product(name: "XCTVapor", package: "vapor"),
-        ])
+        .target(
+            name: "Run",
+            dependencies: [
+                .target(name: "App")
+            ]
+        ),
+        .target(
+            name: "Generators",
+            dependencies: [
+                .target(name: "StylesData"),
+                .target(name: "Filesystem")
+            ]
+        ),
+        .testTarget(
+            name: "AppTests",
+            dependencies: [
+                .target(name: "App"),
+                .product(name: "XCTVapor", package: "vapor"),
+            ]
+        )
     ]
 )

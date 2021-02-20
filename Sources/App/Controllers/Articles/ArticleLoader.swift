@@ -1,5 +1,6 @@
 import Foundation
 import Vapor
+import Filesystem
 
 struct ArticleMeta: Codable {
     let id: String

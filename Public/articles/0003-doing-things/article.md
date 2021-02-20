@@ -250,52 +250,52 @@ of resources. That's probably a bad idea. Oh well! For now, let's get things fix
 sample; *Note: IPHelper is just a constants file*:
 
 ```kotlin
-    private val server: Server by lazy {
-        Server().apply {
-            val httpConfig = HttpConfiguration().apply {
-                sendServerVersion = false
-                secureScheme = IPHelper.encryptedProtocolHttps
-                securePort = IPHelper.preferredEncryptedHttpsPort 
-            }
-            val httpsConfig = HttpConfiguration(httpConfig).apply {
-                addCustomizer(SecureRequestCustomizer())
-            }
-            val sslContextFactory = SslContextFactory.Server().apply {
-                // Find a way to read your password securely. I'm doing it from a file.
-                setKeyStorePassword(readKeystorePassword())
-                // Get the path to your keystore somehow. Be sure to test running in different contexts.
-                keyStorePath = YourFileTools.keystoreFilePath
-                provider = "Conscrypt"
-                // This comes from jetty, but this may not actually work
-                cipherComparator = HTTP2Cipher.COMPARATOR
-            }
-
-            // Connection Factories
-            val http2ConnectionFactory = HTTP2ServerConnectionFactory(httpsConfig)
-            val alpnConnectionFactory = ALPNServerConnectionFactory().apply {
-                // More magic constants, love 'em.
-                defaultProtocol = "h2"
-            }
-            val sslConnectionFactory = SslConnectionFactory(
-                sslContextFactory,
-                alpnConnectionFactory.protocol
-            )
-
-            // HTTP/2 Connector
-            val http2Connector = ServerConnector(this,
-                sslConnectionFactory,
-                alpnConnectionFactory,
-                http2ConnectionFactory,
-                HttpConnectionFactory(httpsConfig)
-            ).apply {
-                port = IPHelper.preferredEncryptedHttpsPort
-                // IP You're listening on
-                host = IPHelper.localNetworkIp
-            }
-
-            addConnector(http2Connector)
+private val server: Server by lazy {
+    Server().apply {
+        val httpConfig = HttpConfiguration().apply {
+            sendServerVersion = false
+            secureScheme = IPHelper.encryptedProtocolHttps
+            securePort = IPHelper.preferredEncryptedHttpsPort 
         }
+        val httpsConfig = HttpConfiguration(httpConfig).apply {
+            addCustomizer(SecureRequestCustomizer())
+        }
+        val sslContextFactory = SslContextFactory.Server().apply {
+            // Find a way to read your password securely. I'm doing it from a file.
+            setKeyStorePassword(readKeystorePassword())
+            // Get the path to your keystore somehow. Be sure to test running in different contexts.
+            keyStorePath = YourFileTools.keystoreFilePath
+            provider = "Conscrypt"
+            // This comes from jetty, but this may not actually work
+            cipherComparator = HTTP2Cipher.COMPARATOR
+        }
+
+        // Connection Factories
+        val http2ConnectionFactory = HTTP2ServerConnectionFactory(httpsConfig)
+        val alpnConnectionFactory = ALPNServerConnectionFactory().apply {
+            // More magic constants, love 'em.
+            defaultProtocol = "h2"
+        }
+        val sslConnectionFactory = SslConnectionFactory(
+            sslContextFactory,
+            alpnConnectionFactory.protocol
+        )
+
+        // HTTP/2 Connector
+        val http2Connector = ServerConnector(this,
+            sslConnectionFactory,
+            alpnConnectionFactory,
+            http2ConnectionFactory,
+            HttpConnectionFactory(httpsConfig)
+        ).apply {
+            port = IPHelper.preferredEncryptedHttpsPort
+            // IP You're listening on
+            host = IPHelper.localNetworkIp
+        }
+
+        addConnector(http2Connector)
     }
+}
 ```
 
 So you run it and... 
