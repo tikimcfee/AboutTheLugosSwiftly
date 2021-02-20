@@ -1,6 +1,7 @@
 import Html
 import CSS
 import Ink
+import Filesystem
 
 public struct ColorPalette {
     public struct Root {
@@ -20,6 +21,12 @@ public struct ColorPalette {
     }
 }
 
+
+func loadRawSharedCss() -> String {
+    return (try? String(contentsOf: rootFile(named: "global.css")))
+        ?? sharedPageCss.string()
+}
+
 public var sharedHead: ChildOf<Tag.Html> {
     .head(
         .meta(attributes: [
@@ -27,7 +34,7 @@ public var sharedHead: ChildOf<Tag.Html> {
             .content("width=device-width, initial-scale=1.0"),
             .charset(.utf8)
         ]),
-        .link(attributes: [.href("/global.css"), .rel(.stylesheet)])
+        .style(unsafe: loadRawSharedCss())
     )
 }
 
@@ -61,6 +68,10 @@ public var sharedPageCss: Stylesheet {
         }
 
         Anchor {
+            color(ColorPalette.NavigationBar.linkTextVisited)
+        }.pseudo(.visited)
+
+        Anchor {
             color(ColorPalette.NavigationBar.linkText)
             textDecoration(.none)
         }
@@ -69,10 +80,6 @@ public var sharedPageCss: Stylesheet {
             color(ColorPalette.NavigationBar.linkTextHover)
             textDecoration(.underline)
         }.pseudo(.hover)
-
-        Anchor {
-            color(ColorPalette.NavigationBar.linkTextVisited)
-        }.pseudo(.visited)
 
         Class(RootNames.bodyContainer.rawValue) {
             padding(.pixels(8))

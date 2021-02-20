@@ -22,6 +22,10 @@ body {
  padding: 0px;
 }
 
+a:visited {
+ color: grey;
+}
+
 a {
  color: peachpuff;
  text-decoration: none;
@@ -30,10 +34,6 @@ a {
 a:hover {
  color: white;
  text-decoration: underline;
-}
-
-a:visited {
- color: grey;
 }
 
 .root-body-container {

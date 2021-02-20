@@ -2,6 +2,7 @@
 import XCTVapor
 import CSS
 import StylesData
+import VendorNetworking
 
 final class AppTests: XCTestCase {
     func testHelloWorld() throws {
@@ -27,4 +28,35 @@ final class AppTests: XCTestCase {
         }
 		print(styles.string())
 	}
+
+    struct GraphQLRequestRoot {
+        let query: String
+    }
+
+    func test() {
+        let token = ""
+        let helper = GithubApiHelper(
+            config: GithubApiHelper.Config(
+                token: token
+            )
+        )
+        let request = CommitsFetchRequest(
+            owner: "tikimcfee",
+            repo: "AboutTheLugosSwiftly",
+            sha: "master",
+            count: 3
+        )
+
+        let expect = XCTestExpectation(description: "Fetch")
+        helper.fetchCommits(request) { result in
+            switch result {
+            case .success(let fetch):
+                print(fetch)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            expect.fulfill()
+        }
+        wait(for: [expect], timeout: 5)
+    }
 }

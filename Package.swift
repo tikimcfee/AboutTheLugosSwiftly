@@ -23,18 +23,22 @@ let package = Package(
             dependencies: [
                 "Ink",
                 "Html",
-                "CSS"
+                "CSS",
             ]
         ),
         .target(
             name: "Filesystem"
         ),
         .target(
+            name: "VendorNetworking"
+        ),
+        .target(
             name: "App",
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
                 .target(name: "StylesData"),
-                .target(name: "Filesystem")
+                .target(name: "Filesystem"),
+                .target(name: "VendorNetworking"),
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of
@@ -53,7 +57,8 @@ let package = Package(
             name: "Generators",
             dependencies: [
                 .target(name: "StylesData"),
-                .target(name: "Filesystem")
+                .target(name: "Filesystem"),
+                .target(name: "VendorNetworking"),
             ]
         ),
         .testTarget(

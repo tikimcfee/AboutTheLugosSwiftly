@@ -2,7 +2,6 @@ import Vapor
 import Html
 import StylesData
 import Filesystem
- 
 
 enum AppRoutes: String, CustomStringConvertible {
     case root = ""
