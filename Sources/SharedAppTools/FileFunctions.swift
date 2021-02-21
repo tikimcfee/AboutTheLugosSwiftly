@@ -35,6 +35,12 @@ public func rawFile(named name: String) -> URL {
         .appendingPathComponent(name)
 }
 
+public func appendToFile(_ file: URL, _ data: Data) throws {
+	let handle = try FileHandle(forUpdating: file)
+	handle.seekToEndOfFile()
+	handle.write(data)
+	try handle.close()
+}
 
 // MARK: - I have no idea how to security
 public struct PrivateFileHelper {

@@ -27,7 +27,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "Filesystem"
+            name: "SharedAppTools"
         ),
         .target(
             name: "VendorNetworking"
@@ -37,7 +37,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
                 .target(name: "StylesData"),
-                .target(name: "Filesystem"),
+                .target(name: "SharedAppTools"),
                 .target(name: "VendorNetworking"),
             ],
             swiftSettings: [
@@ -57,7 +57,7 @@ let package = Package(
             name: "Generators",
             dependencies: [
                 .target(name: "StylesData"),
-                .target(name: "Filesystem"),
+                .target(name: "SharedAppTools"),
                 .target(name: "VendorNetworking"),
             ]
         ),

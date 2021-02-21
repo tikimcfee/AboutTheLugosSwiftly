@@ -3,6 +3,7 @@ import Html
 import Vapor
 import CSS
 import StylesData
+import SharedAppTools
 
 typealias NodesBuilder = () -> [Node]
 
@@ -11,7 +12,9 @@ struct HTMLRenderer {
 
     func renderRouteWith(builder: NodesBuilder) -> String {
         render(.html(
-            sharedHead,
+            makeSharedHtmlHead {[
+				.style(unsafe: "")
+			]},
             renderContentWith(builder: builder)
         ))
     }
@@ -33,6 +36,18 @@ struct HTMLRenderer {
     private var links: [Node] {
         AppRoutes.displayRoutes.map {
             Node.a(attributes: [.href($0.absolute)], .span(.raw($0.description)))
-        }
+		}
     }
+	
+	func globalCssData() -> String {
+		let cssFile = rootFile(named: "global.css")
+		do {
+			let a = try fileManager.attributesOfItem(atPath: cssFile.path)
+			
+			return try String(contentsOf: cssFile)
+		} catch {
+			vaporApp.logger.report(error: error)
+			return ""
+		}
+	}
 }

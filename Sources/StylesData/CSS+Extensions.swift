@@ -1,9 +1,5 @@
 import CSS
 
-public protocol CSSClass {
-    var rawValue: String { get }
-}
-
 public extension Side {
     var prop: CSSProperty {
         switch self {

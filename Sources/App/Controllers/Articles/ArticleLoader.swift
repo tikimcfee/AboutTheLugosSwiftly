@@ -1,6 +1,6 @@
 import Foundation
 import Vapor
-import Filesystem
+import SharedAppTools
 
 struct ArticleMeta: Codable {
     let id: String
