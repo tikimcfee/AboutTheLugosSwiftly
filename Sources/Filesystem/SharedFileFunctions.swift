@@ -3,9 +3,12 @@ import Foundation
 // MARK: - File Operations
 public let fileManager = FileManager.default
 
-public var rootPublicResourceDirectory: URL {
+public var rootDirectory: URL {
     URL(fileURLWithPath: fileManager.currentDirectoryPath, isDirectory: true)
-        .appendingPathComponent("Public")
+}
+
+public var rootPublicResourceDirectory: URL {
+    rootDirectory.appendingPathComponent("Public")
 }
 
 public func rootFile(named fileName: String) -> URL {
@@ -32,3 +35,18 @@ public func rawFile(named name: String) -> URL {
         .appendingPathComponent(name)
 }
 
+
+// MARK: - I have no idea how to security
+public struct PrivateFileHelper {
+    public static var githubBearerToken: String {
+        let bearerPath = rootDirectory
+            .appendingPathComponent("Private")
+            .appendingPathComponent("bearer")
+        do {
+            return try String(contentsOf: bearerPath)
+        } catch {
+            print(error)
+            return ""
+        }
+    }
+}

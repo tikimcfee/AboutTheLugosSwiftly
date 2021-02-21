@@ -3,6 +3,7 @@ import XCTVapor
 import CSS
 import StylesData
 import VendorNetworking
+import Filesystem
 
 final class AppTests: XCTestCase {
     func testHelloWorld() throws {
@@ -29,14 +30,10 @@ final class AppTests: XCTestCase {
 		print(styles.string())
 	}
 
-    struct GraphQLRequestRoot {
-        let query: String
-    }
-
     func test() {
-        let token = ""
+        let token = PrivateFileHelper.githubBearerToken
         let helper = GithubApiHelper(
-            config: GithubApiHelper.Config(
+            config: GAHConfig(
                 token: token
             )
         )

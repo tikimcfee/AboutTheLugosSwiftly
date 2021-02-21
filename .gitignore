@@ -1,9 +1,9 @@
-Packages
-.build
-xcuserdata
 *.xcodeproj
-DerivedData/
+.build
 .DS_Store
-db.sqlite
 .swiftpm
-
+db.sqlite
+DerivedData
+Packages
+Private
+xcuserdata
