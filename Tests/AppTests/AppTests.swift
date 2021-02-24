@@ -36,7 +36,7 @@ final class AppTests: XCTestCase {
 	func testLockReadWriteCss() throws {
 		let testName = rootFile(named: "global.css")
 		
-		let manualCssRead = try! Data(contentsOf: testName)
+		let manualCssRead = try! String(contentsOf: testName)
 		print("Have:\n\(manualCssRead)\n")
 		
         let reader = LockingResourceReader()
@@ -45,7 +45,7 @@ final class AppTests: XCTestCase {
         let (first, second) = (try! reader.get(testName), try! reader.get(testName))
 		XCTAssert(first == second, "Cached successive reads are unequal")
 		
-        let manualRefresh = "body { color: \"#cccccc\" }".data(using: .utf8)!
+        let manualRefresh = "body { color: \"#cccccc\" }"
         reader.set(testName, for: manualRefresh)
 		XCTAssert(try! reader.get(testName) == manualRefresh, "Updated entry did not return correctly")
 	}

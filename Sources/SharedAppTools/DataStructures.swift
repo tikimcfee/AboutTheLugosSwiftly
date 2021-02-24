@@ -24,19 +24,14 @@ open class LockingCacheThrowing<Key: Hashable, Value>: CacheBuilder {
         return cached
     }
     
-    open func make(_ key: Key, _ store: inout [Key: Value]) throws -> Value {
-        fatalError("Must conform to make")
-    }
-    
     public func set(_ key: Key, for value: Value) {
         lock(); defer { unlock() }
         cache[key] = value
     }
-	
-	public func update(_ action: (inout [Key: Value]) -> Void) {
-		lock(); defer { unlock() }
-		action(&cache)
-	}
+
+    open func make(_ key: Key, _ store: inout [Key: Value]) throws -> Value {
+        fatalError("Must conform to make")
+    }
 }
 
 private extension LockingCacheThrowing {
@@ -46,12 +41,13 @@ private extension LockingCacheThrowing {
 	/// Wait and recheck cache, last lock may have already set
 	private func lockAndCache(_ key: Key) throws -> Value {
 		lock(); defer { unlock() }
+        
         if let cached = cache[key] {
             return cached
+        } else {
+            let new = try make(key, &cache)
+            cache[key] = new
+            return new
         }
-        
-        let new = try make(key, &cache)
-        cache[key] = new
-        return new
 	}
 }

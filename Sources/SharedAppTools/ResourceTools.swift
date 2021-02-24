@@ -2,11 +2,13 @@ import Foundation
 
 public typealias ErrorHook = (Error) -> Void
 
-public struct CachingResourceLoader {
+public struct CachingLoader {
 	let reader = LockingResourceReader()
 	let tracker = FileChangeTracker()
+    
+    public init() { }
 	
-	func resourceData(for file: URL) throws -> Data {
+	public func resourceData(for file: URL) throws -> String {
         do {
             if try tracker.hasFileChanged(file) {
                 try reader.refresh(file)
@@ -20,22 +22,22 @@ public struct CachingResourceLoader {
 
 // MARK: Locking URL:data cache
 
-public typealias LRRKey = URL
-public typealias LRRValue = Data
-public typealias LRRStore = [URL: Data]
+public typealias ResourceKey = URL
+public typealias LockedResource = String
+public typealias LockedResourceMap = [URL: String]
 
-public class LockingResourceReader: LockingCacheThrowing<LRRKey, LRRValue> {
-	public override func make(_ key: LRRKey, _ store: inout LRRStore) throws -> LRRValue {
+public class LockingResourceReader: LockingCacheThrowing<ResourceKey, LockedResource> {
+	public override func make(_ key: ResourceKey, _ store: inout LockedResourceMap) throws -> LockedResource {
         try loadDataFrom(key)
 	}
 	
-	public func refresh(_ key: LRRKey) throws {
+	public func refresh(_ key: ResourceKey) throws {
         let refresh = try loadDataFrom(key)
         set(key, for: refresh)
 	}
 	
-	private func loadDataFrom(_ key: LRRKey) throws -> Data {
-        try Data(contentsOf: key)
+	private func loadDataFrom(_ key: ResourceKey) throws -> LockedResource {
+        try String(contentsOf: key)
 	}
 }
 
@@ -57,9 +59,9 @@ public class FileChangeTracker {
 	}
     
     private func lockedFetch(_ file: URL) throws -> (cached: Date?, current: Date) {
-        let current = try modificationDate(for: file)
-        
         lock.wait(); defer { lock.signal() }
+        
+        let current = try modificationDate(for: file)
         let cached = knownDates[file]
         knownDates[file] = current
         

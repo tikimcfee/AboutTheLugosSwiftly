@@ -9,12 +9,29 @@ typealias NodesBuilder = () -> [Node]
 
 struct HTMLRenderer {
     let vaporApp: Vapor.Application
+    let resourceLoader = CachingLoader()
+    
+    private var cssString: String {
+        do {
+            return try resourceLoader.resourceData(
+                for: rootFile(named: "global.css")
+            )
+        } catch {
+            vaporApp.logger.report(error: error)
+            return ""
+        }
+    }
 
     func renderRouteWith(builder: NodesBuilder) -> String {
         render(.html(
-            makeSharedHtmlHead {[
-				.style(unsafe: "")
-			]},
+            .head(
+                .meta(attributes: [
+                    .init("name", "viewport"),
+                    .content("width=device-width, initial-scale=1.0"),
+                    .charset(.utf8)
+                ]),
+                .style(unsafe: cssString)
+            ),
             renderContentWith(builder: builder)
         ))
     }
@@ -38,16 +55,4 @@ struct HTMLRenderer {
             Node.a(attributes: [.href($0.absolute)], .span(.raw($0.description)))
 		}
     }
-	
-	func globalCssData() -> String {
-		let cssFile = rootFile(named: "global.css")
-		do {
-			let a = try fileManager.attributesOfItem(atPath: cssFile.path)
-			
-			return try String(contentsOf: cssFile)
-		} catch {
-			vaporApp.logger.report(error: error)
-			return ""
-		}
-	}
 }
