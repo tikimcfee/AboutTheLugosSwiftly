@@ -17,7 +17,7 @@ final class AppTests: XCTestCase {
 		VAPOR_APP.shutdown()
 	}
 	
-    func testHelloWorld() throws {
+    func testContainerInstantiation() throws {
         _ = VaporRouteRenderingContainer(vaporApp: VAPOR_APP)
     }
 
@@ -34,31 +34,43 @@ final class AppTests: XCTestCase {
 	}
     
 	func testLockReadWriteCss() throws {
-		let testName = rawFile(named: "global.css")
+		let testName = rootFile(named: "global.css")
 		
 		let manualCssRead = try! Data(contentsOf: testName)
 		print("Have:\n\(manualCssRead)\n")
-		let reader = LockingResourceReader()
-		XCTAssert(reader[testName] == manualCssRead, "Cached reader did not return manual read")
-		XCTAssert(reader[testName] == reader[testName], "Cached successive reads are unequal")
-		let manualRefresh = "body { color: \"#cccccc\" }".data(using: .utf8)!
-		reader[testName] = manualRefresh
-		XCTAssert(reader[testName] == manualRefresh, "Updated entry did not return correctly")
+		
+        let reader = LockingResourceReader()
+        XCTAssert(try! reader.get(testName) == manualCssRead, "Cached reader did not return manual read")
+        
+        let (first, second) = (try! reader.get(testName), try! reader.get(testName))
+		XCTAssert(first == second, "Cached successive reads are unequal")
+		
+        let manualRefresh = "body { color: \"#cccccc\" }".data(using: .utf8)!
+        reader.set(testName, for: manualRefresh)
+		XCTAssert(try! reader.get(testName) == manualRefresh, "Updated entry did not return correctly")
 	}
 	
 	func testChangeTracker() throws {
 		let tracker = FileChangeTracker()
-		tracker.errorHook = { XCTFail($0.localizedDescription) }
 		let testFile = rootFile(named: "global.css")
 		
-		let firstCall = tracker.hasFileChanged(testFile)
+		let firstCall = try! tracker.hasFileChanged(testFile)
 		XCTAssert(firstCall == true, "First file read should always return 'true', since it has not yet been tracked")
-		let secondCall = tracker.hasFileChanged(testFile)
+		let secondCall = try! tracker.hasFileChanged(testFile)
 		XCTAssert(secondCall == false, "First and second checks should always return 'true/false'")
 		
 		try appendToFile(testFile, "\n".data(using: .utf8)!)
-		let thirdCall = tracker.hasFileChanged(testFile)
+		let thirdCall = try! tracker.hasFileChanged(testFile)
 		XCTAssert(thirdCall == true, "Should always return 'true' after writing to file")
+        
+        let fourthCall = try! tracker.hasFileChanged(testFile)
+        XCTAssert(fourthCall == false, "Should always return 'false' after reading a second time")
+        
+        let multipleCallsAllFalse =
+            (0...10)
+            .map { _ in try! tracker.hasFileChanged(testFile) }
+            .allSatisfy { $0 == false }
+        XCTAssert(multipleCallsAllFalse == true, "Any number of calls to an unchanged file should always return 'false'")
 	}
 }
 

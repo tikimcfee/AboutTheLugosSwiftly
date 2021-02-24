@@ -4,47 +4,54 @@ import Foundation
 protocol CacheBuilder {
 	associatedtype Key: Hashable
 	associatedtype Value
-	func make(_ key: Key, _ store: inout [Key: Value]) -> Value
+	func make(_ key: Key, _ store: inout [Key: Value]) throws -> Value
 }
 
 /// Returns reads immediately, and if no value exists, locks dictionary write
 /// and creates a new object from the given builder. Passed map to allow additional
-/// modifications during critical section
-open class LockingCache<Key: Hashable, Value>: CacheBuilder {
+/// modifications during critical section.
+/// -- Rebuilt to allow errors to be handled instead of defaulted on.
+open class LockingCacheThrowing<Key: Hashable, Value>: CacheBuilder {
 	private var cache = [Key: Value]()
 	private let semaphore = DispatchSemaphore(value: 1)
 	
 	public init() { }
+    
+    public func get(_ key: Key) throws -> Value {
+        guard let cached = cache[key] else {
+            return try lockAndCache(key)
+        }
+        return cached
+    }
+    
+    open func make(_ key: Key, _ store: inout [Key: Value]) throws -> Value {
+        fatalError("Must conform to make")
+    }
+    
+    public func set(_ key: Key, for value: Value) {
+        lock(); defer { unlock() }
+        cache[key] = value
+    }
 	
-	public subscript(key: Key) -> Value {
-		get { cache[key] ?? lockAndCache(key) }
-		set { lockAndUpdate { $0[key] = newValue } }
-	}
-	
-	public func lockAndUpdate(_ action: (inout [Key: Value]) -> Void) {
-		lock(); defer {unlock() }
+	public func update(_ action: (inout [Key: Value]) -> Void) {
+		lock(); defer { unlock() }
 		action(&cache)
-	}
-	
-	open func make(_ key: Key, _ store: inout [Key: Value]) -> Value {
-		fatalError("Must conform to make")
 	}
 }
 
-private extension LockingCache {
+private extension LockingCacheThrowing {
 	private func lock() { semaphore.wait() }
 	private func unlock() { semaphore.signal() }
 	
 	/// Wait and recheck cache, last lock may have already set
-	private func lockAndCache(_ key: Key) -> Value {
+	private func lockAndCache(_ key: Key) throws -> Value {
 		lock(); defer { unlock() }
-		return cache[key] ?? makeFor(key)
-	}
-	
-	/// Create and set, default result as cache value
-	private func makeFor(_ key: Key) -> Value {
-		let new = make(key, &cache)
-		cache[key] = new
-		return new
+        if let cached = cache[key] {
+            return cached
+        }
+        
+        let new = try make(key, &cache)
+        cache[key] = new
+        return new
 	}
 }
