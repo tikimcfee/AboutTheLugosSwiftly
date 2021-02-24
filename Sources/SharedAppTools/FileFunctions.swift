@@ -25,7 +25,7 @@ public extension URL {
             at: self,
             includingPropertiesForKeys: nil,
             options: .skipsHiddenFiles
-        )
+        ).sorted { $0.path < $1.path }
     }
 }
 
