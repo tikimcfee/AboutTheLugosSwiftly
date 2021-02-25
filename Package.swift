@@ -7,6 +7,14 @@ let package = Package(
     platforms: [
        .macOS(.v10_15)
     ],
+    products: [
+         .library(
+            name: "VaporLugos",
+            targets: [
+                "Generators"
+            ]
+         ),
+    ],
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
