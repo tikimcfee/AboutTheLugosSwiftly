@@ -11,9 +11,7 @@ let package = Package(
          .library(
             name: "VaporLugos",
             targets: [
-                "StylesData",
-                "SharedAppTools",
-                "VendorNetworking"
+                "Generators"
             ]
          ),
     ],
