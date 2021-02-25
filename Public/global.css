@@ -3,8 +3,8 @@ html {
  width: 100%;
  margin: 0px;
  padding: 0px;
- font-family: Arial;
- color: rgba(204,204,204,1.0);
+ font-family: Tahoma;
+ color: rgba(185,184,184,1.0);
 }
 
 body pre {
@@ -20,6 +20,19 @@ body {
  width: 100%;
  margin: 0px;
  padding: 0px;
+}
+
+p {
+ font-size: 0.87rem;
+ line-height: 1.2rem;
+}
+
+h1 {
+ margin-top: 4px; margin-bottom: 4px;
+}
+
+h2 {
+ margin-top: 4px; margin-bottom: 4px;
 }
 
 a:visited {

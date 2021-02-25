@@ -22,7 +22,7 @@ public enum NavigationBarNames: String, CSSClass, CaseIterable {
 public struct ColorPalette {
 	public struct Root {
 		public static let siteBackground = Color.black
-		public static let text = Color.rgba(204, 204, 204, 1)
+		public static let text = Color.rgb(185, 184, 184)
 	}
 	public struct NavigationBar {
 		public static let background = Color.rgba(24, 48, 96, 1.0)

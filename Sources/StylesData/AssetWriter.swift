@@ -10,7 +10,7 @@ public struct AssetWriter {
 
     public static func writeGlobalCss() throws {
         try SiteStyling.sharedPageCss.string().write(
-            to: rawFile(named: "global.css"),
+            to: rootFile(named: "global.css"),
             atomically: true,
             encoding: .utf8
         )

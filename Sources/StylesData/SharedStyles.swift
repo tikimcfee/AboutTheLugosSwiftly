@@ -12,7 +12,7 @@ public struct SiteStyling {
                 margin(.pixels(0))
                 padding(.pixels(0))
 
-                font(.family("Arial"))
+                font(.family("Tahoma"))
                 color(ColorPalette.Root.text)
             }
 
@@ -31,6 +31,19 @@ public struct SiteStyling {
                     border(ColorPalette.Content.preBody, .pixels(2), .solid)
                     borderRadius(.pixels(8))
                 }
+            }
+            
+            Paragraph {
+                fontSize(.rem(0.87))
+                lineHeight(.rem(1.2))
+            }
+            
+            Heading(1) {
+                margin([.top, .bottom], .pixels(4))
+            }
+            
+            Heading(2) {
+                margin([.top, .bottom], .pixels(4))
             }
 
             Anchor {
