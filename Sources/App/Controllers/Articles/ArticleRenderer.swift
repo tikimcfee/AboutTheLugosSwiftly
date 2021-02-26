@@ -3,7 +3,7 @@ import Vapor
 
 struct ArticleRenderer {
     let vaporApp: Vapor.Application
-    let loader: ArticleLoader
+    let loader: ArticleLoaderComponent
 
     func render(articleId: String, _ completed: (String) -> Void) {
         guard let article = loader.articleLookup[articleId]

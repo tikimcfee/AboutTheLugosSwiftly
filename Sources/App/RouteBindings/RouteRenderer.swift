@@ -38,12 +38,12 @@ public class VaporRouteRenderingContainer {
         HTMLRenderer(vaporApp: vaporApp)
     }()
 
-    let articleLoader: ArticleLoader
+    let articleLoader: ArticleLoaderComponent
     let articleRenderer: ArticleRenderer
 
     public init(vaporApp: Vapor.Application) {
         self.vaporApp = vaporApp
-        self.articleLoader = ArticleLoader(vaporApp: vaporApp)
+        self.articleLoader = ArticleLoaderComponent(vaporApp: vaporApp)
         self.articleRenderer = ArticleRenderer(vaporApp: vaporApp, loader: articleLoader)
 
         configureServer()
