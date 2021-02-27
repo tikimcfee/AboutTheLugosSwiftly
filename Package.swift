@@ -21,11 +21,11 @@ let package = Package(
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
         // HTML DSL BBTTYLLOLKTHXBY
-        .package(name: "Html", url: "https://github.com/pointfreeco/swift-html.git", from: "0.3.1"),
+        .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", from: "0.3.1"),
         // Markdown -> HTML
-        .package(name: "Ink", url: "https://github.com/johnsundell/ink.git", from: "0.5.0"),
+        .package(name: "Ink",  url: "https://github.com/tikimcfee/ink", .branch("master")),
 		// CSS STUFF!
-        .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master"))
+        .package(name: "CSS",  url: "https://github.com/tikimcfee/swift-css", .branch("master"))
     ],
     targets: [
         .target(
