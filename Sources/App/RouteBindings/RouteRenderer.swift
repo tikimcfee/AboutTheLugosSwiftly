@@ -2,6 +2,7 @@ import Vapor
 import Html
 import StylesData
 import SharedAppTools
+import MarkdownKit
 
 enum AppRoutes: String, CustomStringConvertible {
     case root = ""
@@ -109,10 +110,10 @@ public class VaporRouteRenderingContainer {
         do {
             let aboutFile = rawFile(named: "about.md")
             let aboutContents = try String(contentsOf: aboutFile)
-            let aboutMarkdown = markdownParser.html(from: aboutContents)
-
+            let markdown = MarkdownParser.standard.parse(aboutContents)
+            let aboutHtml = HtmlGenerator.standard.generate(doc: markdown)
             return baseRenderer.renderRouteWith{[
-                .raw(aboutMarkdown)
+                .raw(aboutHtml)
             ]}.asHtmlResponse
         } catch {
             return req.redirect(to: AppRoutes.root.rawValue)

@@ -23,7 +23,7 @@ let package = Package(
         // HTML DSL BBTTYLLOLKTHXBY
         .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", from: "0.3.1"),
         // Markdown -> HTML
-        .package(name: "Ink",  url: "https://github.com/tikimcfee/ink", .branch("master")),
+        .package(name: "MarkdownKit", url: "https://github.com/tikimcfee/swift-markdownkit", from: "1.0.5"),
 		// CSS STUFF!
         .package(name: "CSS",  url: "https://github.com/tikimcfee/swift-css", .branch("master"))
     ],
@@ -31,7 +31,7 @@ let package = Package(
         .target(
             name: "StylesData",
             dependencies: [
-                "Ink",
+                "MarkdownKit",
                 "Html",
                 "CSS",
             ]

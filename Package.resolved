@@ -29,15 +29,6 @@
         }
       },
       {
-        "package": "Ink",
-        "repositoryURL": "https://github.com/tikimcfee/ink",
-        "state": {
-          "branch": "master",
-          "revision": "3e3a116934d2e415c89b4473f12700713d9e48ec",
-          "version": null
-        }
-      },
-      {
         "package": "multipart-kit",
         "repositoryURL": "https://github.com/vapor/multipart-kit.git",
         "state": {
@@ -98,6 +89,15 @@
           "branch": null,
           "revision": "173f567a2dfec11d74588eea82cecea555bdc0bc",
           "version": "1.4.0"
+        }
+      },
+      {
+        "package": "MarkdownKit",
+        "repositoryURL": "https://github.com/tikimcfee/swift-markdownkit",
+        "state": {
+          "branch": null,
+          "revision": "20f722a5909be4fede4ec4903db46780379cea9e",
+          "version": "1.0.5"
         }
       },
       {

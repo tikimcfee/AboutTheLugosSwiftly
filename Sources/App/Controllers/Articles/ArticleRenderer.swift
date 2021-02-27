@@ -1,4 +1,4 @@
-import Ink
+import MarkdownKit
 import Vapor
 
 struct ArticleRenderer {
@@ -11,8 +11,9 @@ struct ArticleRenderer {
 
         do {
             let rawArticle = try article.articleContents()
-            let markdown = markdownParser.html(from: rawArticle)
-            completed(markdown)
+            let parsed = MarkdownParser.standard.parse(rawArticle)
+            let html = HtmlGenerator.standard.generate(doc: parsed)
+            completed(html)
         } catch {
             vaporApp.logger.report(error: error)
         }
@@ -24,7 +25,8 @@ struct ArticleRenderer {
 
         do {
             let rawArticle = try article.articleContents()
-            let markdown = markdownParser.html(from: rawArticle)
+            let parsed = MarkdownParser.standard.parse(rawArticle)
+            let markdown = HtmlGenerator.standard.generate(doc: parsed)
             return markdown
         } catch {
             vaporApp.logger.report(error: error)

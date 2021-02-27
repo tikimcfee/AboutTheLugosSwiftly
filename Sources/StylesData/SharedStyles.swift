@@ -1,6 +1,5 @@
 import Html
 import CSS
-import Ink
 import SharedAppTools
 
 public struct SiteStyling {
