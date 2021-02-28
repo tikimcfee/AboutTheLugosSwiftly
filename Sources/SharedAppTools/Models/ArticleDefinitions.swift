@@ -3,7 +3,17 @@ import Foundation
 public typealias ArticleList = [ArticleFile]
 public typealias ArticleIndex = [String: ArticleFile]
 
-public struct ArticleMeta: Codable {
+private let articleJsonDecoder = JSONDecoder()
+private let articleJsonEncoder = JSONEncoder()
+
+public extension ArticleFile {
+    func commitMetaToPath() throws {
+        let metaJson = try articleJsonEncoder.encode(meta)
+        try metaJson.write(to: metaFilePath)
+    }
+}
+
+public struct ArticleMeta: Equatable, Codable {
     public var id: String
     public var name: String
     public var summary: String

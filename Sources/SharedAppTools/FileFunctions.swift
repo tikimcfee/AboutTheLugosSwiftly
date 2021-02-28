@@ -19,6 +19,20 @@ public func rootSubDirectory(named directoryName: String) -> URL {
     rootPublicResourceDirectory.appendingPathComponent(directoryName, isDirectory: true)
 }
 
+#if DEBUG
+public var rootTestResourceDirectory: URL {
+    rootDirectory.appendingPathComponent("Tests")
+}
+
+public var testDataDirectory: URL {
+    rootTestResourceDirectory.appendingPathComponent("TestData", isDirectory: true)
+}
+
+public var xxxxTestUrl: URL {
+    testDataDirectory.appendingPathComponent("xxxx-article-tests", isDirectory: true)
+}
+#endif
+
 public extension URL {
     func defaultContents() throws -> [URL] {
         try fileManager.contentsOfDirectory(

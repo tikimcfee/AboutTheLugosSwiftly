@@ -74,6 +74,49 @@ final class AppTests: XCTestCase {
 	}
 }
 
+final class ArticleFileTests: XCTestCase {
+    
+    private func LOG_PAD() { print("\n\n\n\n") }
+    
+    override func setUp() {
+        
+    }
+    
+    override func tearDown() {
+        LOG_PAD()
+    }
+    
+    private func loadXXXXTestArticle() throws -> ArticleFile {
+        let testArticleRoot = xxxxTestUrl
+        let contents = try testArticleRoot.defaultContents()
+        var sniffState = ArticleSniffState()
+        guard let file = try sniffState.makeFrom(urls: contents) else {
+            fatalError("Could not parse article from \(testArticleRoot)")
+        }
+        return file
+    }
+    
+    func testReadFile() throws {
+        LOG_PAD()
+        
+        print()
+    }
+    
+    func testUpdateDate() throws {
+        LOG_PAD()
+        
+        var file = try loadXXXXTestArticle()
+        let metaOriginalDate = file.meta.postedAt
+        let metaNewDate = metaOriginalDate.advanced(by: TimeInterval(60 * 60 * 12))
+        
+        file.meta.postedAt = metaNewDate
+        try file.commitMetaToPath()
+        
+        let rereadFile = try loadXXXXTestArticle()
+        XCTAssert(file.meta == rereadFile.meta, "Article meta does not match :\n\nOriginal:\n\(file.meta)\n\nReread:\n\(rereadFile.meta)")
+    }
+}
+
 final class VendorNetworkingTests: XCTestCase {
 	func testGithubTokenAndFetch() {
 		let token = PrivateFileHelper.githubBearerToken
