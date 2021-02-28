@@ -3,10 +3,10 @@ import Vapor
 
 struct ArticleRenderer {
     let vaporApp: Vapor.Application
-    let loader: ArticleLoaderComponent
+    let loader: VaporArticleLoader
 
     func render(articleId: String, _ completed: (String) -> Void) {
-        guard let article = loader.articleLookup[articleId]
+        guard let article = loader[articleId]
         else { return }
 
         do {
@@ -20,7 +20,7 @@ struct ArticleRenderer {
     }
 
     func render(articleId: String) -> String {
-        guard let article = loader.articleLookup[articleId]
+        guard let article = loader[articleId]
         else { return "" }
 
         do {

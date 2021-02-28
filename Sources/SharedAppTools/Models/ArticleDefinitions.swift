@@ -3,13 +3,21 @@ import Foundation
 public typealias ArticleList = [ArticleFile]
 public typealias ArticleIndex = [String: ArticleFile]
 
-private let articleJsonDecoder = JSONDecoder()
-private let articleJsonEncoder = JSONEncoder()
+public struct ArticleFile {
+    public var meta: ArticleMeta
+    public var metaFilePath: URL
+    public var articleFilePath: URL
+    
+    public init(meta: ArticleMeta,
+                metaFilePath: URL,
+                articleFilePath: URL) {
+        self.meta = meta
+        self.metaFilePath = metaFilePath
+        self.articleFilePath = articleFilePath
+    }
 
-public extension ArticleFile {
-    func commitMetaToPath() throws {
-        let metaJson = try articleJsonEncoder.encode(meta)
-        try metaJson.write(to: metaFilePath)
+    public func articleContents() throws -> String {
+        try String(contentsOf: articleFilePath)
     }
 }
 
@@ -30,20 +38,12 @@ public struct ArticleMeta: Equatable, Codable {
     }
 }
 
-public struct ArticleFile {
-    public var meta: ArticleMeta
-    public var metaFilePath: URL
-    public var articleFilePath: URL
-    
-    public init(meta: ArticleMeta,
-                metaFilePath: URL,
-                articleFilePath: URL) {
-        self.meta = meta
-        self.metaFilePath = metaFilePath
-        self.articleFilePath = articleFilePath
-    }
+private let articleJsonDecoder = JSONDecoder()
+private let articleJsonEncoder = JSONEncoder()
 
-    public func articleContents() throws -> String {
-        try String(contentsOf: articleFilePath)
+public extension ArticleFile {
+    func commitMetaToPath() throws {
+        let metaJson = try articleJsonEncoder.encode(meta)
+        try metaJson.write(to: metaFilePath)
     }
 }
