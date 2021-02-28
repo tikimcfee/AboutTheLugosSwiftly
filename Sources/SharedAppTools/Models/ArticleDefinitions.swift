@@ -4,16 +4,19 @@ public typealias ArticleList = [ArticleFile]
 public typealias ArticleIndex = [String: ArticleFile]
 
 public struct ArticleMeta: Codable {
-    public let id: String
-    public let name: String
-    public let summary: String
+    public var id: String
+    public var name: String
+    public var summary: String
+    public var postedAt: TimeInterval
     
     public init(id: String,
                 name: String,
-                summary: String) {
+                summary: String,
+                postedAtEpoch: TimeInterval) {
         self.id = id
         self.name = name
         self.summary = summary
+        self.postedAtEpoch = postedAtEpoch
     }
 }
 
