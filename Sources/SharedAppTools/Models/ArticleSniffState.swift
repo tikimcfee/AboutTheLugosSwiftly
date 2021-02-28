@@ -33,6 +33,7 @@ public struct ArticleSniffState {
         let meta = try Self.decoder.decode(ArticleMeta.self, from: metaData)
         return ArticleFile(
             meta: meta,
+            metaFilePath: metaUrl,
             articleFilePath: markdownUrl
         )
     }

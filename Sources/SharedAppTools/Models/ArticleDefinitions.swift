@@ -12,21 +12,24 @@ public struct ArticleMeta: Codable {
     public init(id: String,
                 name: String,
                 summary: String,
-                postedAtEpoch: TimeInterval) {
+                postedAt: TimeInterval) {
         self.id = id
         self.name = name
         self.summary = summary
-        self.postedAtEpoch = postedAtEpoch
+        self.postedAt = postedAt
     }
 }
 
 public struct ArticleFile {
     public var meta: ArticleMeta
+    public var metaFilePath: URL
     public var articleFilePath: URL
     
     public init(meta: ArticleMeta,
+                metaFilePath: URL,
                 articleFilePath: URL) {
         self.meta = meta
+        self.metaFilePath = metaFilePath
         self.articleFilePath = articleFilePath
     }
 
