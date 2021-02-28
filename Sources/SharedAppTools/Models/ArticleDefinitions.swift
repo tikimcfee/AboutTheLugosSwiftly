@@ -21,8 +21,8 @@ public struct ArticleMeta: Codable {
 }
 
 public struct ArticleFile {
-    public let meta: ArticleMeta
-    public let articleFilePath: URL
+    public var meta: ArticleMeta
+    public var articleFilePath: URL
     
     public init(meta: ArticleMeta,
                 articleFilePath: URL) {
