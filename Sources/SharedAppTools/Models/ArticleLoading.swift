@@ -8,7 +8,9 @@ public class ArticleLoaderComponent {
     private let refreshTime = 60 * 60
     private let loadingQueue: DispatchQueue
     private let loader = ArticleLoader()
-    public let rootDirectory: URL
+    public var rootDirectory: URL {
+        didSet { try? discoverArticles() }
+    }
     
     public var onLoadStart: LoadStart?
     public var onLoadStop: LoadStop?
@@ -29,7 +31,7 @@ public class ArticleLoaderComponent {
     private func refreshArticles() {
         onLoadStart?()
         do {
-            (currentArticles, articleLookup) = try discoverArticles()
+            try discoverArticles()
             onLoadStop?()
         } catch {
             onLoadError?(error)
@@ -40,13 +42,13 @@ public class ArticleLoaderComponent {
         )
     }
     
-    private func discoverArticles() throws -> (ArticleList, ArticleIndex) {
+    private func discoverArticles() throws {
         var allArticles = ArticleList()
         var index = ArticleIndex()
         try allArticleDirectories().forEach { articleDirectory in
             try self.loader.sniff(articleDirectory, into: &allArticles, index: &index)
         }
-        return (allArticles, index)
+        (currentArticles, articleLookup) = (allArticles, index)
     }
     
     private func allArticleDirectories() throws -> [URL] {
