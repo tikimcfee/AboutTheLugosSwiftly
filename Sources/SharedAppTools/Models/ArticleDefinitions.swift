@@ -38,12 +38,12 @@ public struct ArticleMeta: Equatable, Codable {
     }
 }
 
-private let articleJsonDecoder = JSONDecoder()
-private let articleJsonEncoder = JSONEncoder()
-
 public extension ArticleFile {
+    private static let articleJsonDecoder = JSONDecoder()
+    private static let articleJsonEncoder = JSONEncoder()
+    
     func commitMetaToPath() throws {
-        let metaJson = try articleJsonEncoder.encode(meta)
+        let metaJson = try Self.articleJsonEncoder.encode(meta)
         try metaJson.write(to: metaFilePath)
     }
 }

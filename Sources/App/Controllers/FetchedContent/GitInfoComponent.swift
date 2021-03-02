@@ -17,6 +17,7 @@ struct GitWidgetRenderer {
 
 class GitNetworkingStorageGlue {
     static var instance = GitNetworkingStorageGlue()
+    let jsonDecoder = JSONDecoder()
 
     lazy var helper: GithubApiHelper = {
         GithubApiHelper(

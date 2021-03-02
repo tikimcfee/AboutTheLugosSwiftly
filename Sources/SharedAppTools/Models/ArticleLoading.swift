@@ -1,23 +1,16 @@
 import Foundation
 
-public class ArticleLoaderComponent {
-    public typealias LoadStart = () -> Void
-    public typealias LoadStop = () -> Void
-    public typealias LoadError = (Error) -> Void
-    
-    private let refreshTime = 60 * 60
+public class ArticleLoaderComponent: ObservableObject {
     private let loadingQueue: DispatchQueue
     private let loader = ArticleLoader()
     public var rootDirectory: URL {
         didSet { try? discoverArticles() }
     }
     
-    public var onLoadStart: LoadStart?
-    public var onLoadStop: LoadStop?
-    public var onLoadError: LoadError?
-    
-    public var currentArticles = ArticleList()
-    public var articleLookup = ArticleIndex()
+    @Published public var currentArticles = ArticleList()
+    @Published public var articleLookup = ArticleIndex()
+    @Published public var loadingError: Error? = nil
+    private var poll = false
     
     public init(rootDirectory: URL) {
         self.rootDirectory = rootDirectory
@@ -25,19 +18,27 @@ public class ArticleLoaderComponent {
     }
 
     public func kickoffArticleLoading() {
-        loadingQueue.async { self.refreshArticles() }
+        poll = true
+        loadingQueue.async {
+            self.refreshArticles()
+        }
+    }
+    
+    public func stopRefreshing() {
+        poll = false
     }
 
-    private func refreshArticles() {
-        onLoadStart?()
+    public func refreshArticles() {
         do {
             try discoverArticles()
-            onLoadStop?()
         } catch {
-            onLoadError?(error)
+            loadingError = error
         }
+        
+        guard poll else { return }
+        
         loadingQueue.asyncAfter(
-            deadline: .now() + .seconds(refreshTime),
+            deadline: .now() + .seconds(60),
             execute: refreshArticles
         )
     }

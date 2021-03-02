@@ -76,10 +76,8 @@ final class AppTests: XCTestCase {
 
 final class ArticleFileTests: XCTestCase {
     
-    private func LOG_PAD() { print("\n\n\n\n") }
-    
     override func setUp() {
-        
+        continueAfterFailure = false
     }
     
     override func tearDown() {
@@ -96,12 +94,6 @@ final class ArticleFileTests: XCTestCase {
         return file
     }
     
-    func testReadFile() throws {
-        LOG_PAD()
-        
-        print()
-    }
-    
     func testUpdateDate() throws {
         LOG_PAD()
         
@@ -114,6 +106,33 @@ final class ArticleFileTests: XCTestCase {
         
         let rereadFile = try loadXXXXTestArticle()
         XCTAssert(file.meta == rereadFile.meta, "Article meta does not match :\n\nOriginal:\n\(file.meta)\n\nReread:\n\(rereadFile.meta)")
+    }
+    
+    func testSaveAndDeleteArticle() throws {
+        LOG_PAD()
+        
+        let articleCreator = ArticleCreator(rootDirectory: testDataDirectory)
+        let testLoader = ArticleLoaderComponent(rootDirectory: testDataDirectory)
+        testLoader.refreshArticles()
+    
+        let originalFile = try loadXXXXTestArticle()
+        let originalBody = try originalFile.articleContents()
+        
+        var updatedMeta = originalFile.meta
+        updatedMeta.id = "simple-gibbons-liverspots"
+        
+        try articleCreator.createNew(article: originalBody, with: updatedMeta)
+        testLoader.refreshArticles()
+        guard let reloadedFile = testLoader.articleLookup[updatedMeta.id] else {
+            XCTFail("Failed to reload newly written article")
+            return
+        }
+        
+        XCTAssert(updatedMeta == reloadedFile.meta, "Reread file has mismatched meta")
+        let reloadedContents = try reloadedFile.articleContents()
+        XCTAssert(originalBody == reloadedContents, "Reread file has mismatched body")
+        
+        try articleCreator.delete(article: updatedMeta)
     }
 }
 
@@ -166,3 +185,5 @@ final class StylingTests: XCTestCase {
 		print(styles.string())
 	}	
 }
+
+func LOG_PAD() { print("\n\n\n\n") }
