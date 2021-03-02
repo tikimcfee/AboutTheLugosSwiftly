@@ -4,13 +4,12 @@ public class ArticleLoaderComponent: ObservableObject {
     private let loadingQueue: DispatchQueue
     private let loader = ArticleLoader()
     public var rootDirectory: URL {
-        didSet { try? discoverArticles() }
+        didSet { callAndSet() }
     }
     
     @Published public var currentArticles = ArticleList()
     @Published public var articleLookup = ArticleIndex()
     @Published public var loadingError: Error? = nil
-    private var poll = false
     
     public init(rootDirectory: URL) {
         self.rootDirectory = rootDirectory
@@ -18,29 +17,25 @@ public class ArticleLoaderComponent: ObservableObject {
     }
 
     public func kickoffArticleLoading() {
-        poll = true
         loadingQueue.async {
             self.refreshArticles()
         }
     }
     
-    public func stopRefreshing() {
-        poll = false
-    }
-
     public func refreshArticles() {
+        callAndSet()
+        loadingQueue.asyncAfter(
+            deadline: .now() + .seconds(60),
+            execute: refreshArticles
+        )
+    }
+    
+    private func callAndSet() {
         do {
             try discoverArticles()
         } catch {
             loadingError = error
         }
-        
-        guard poll else { return }
-        
-        loadingQueue.asyncAfter(
-            deadline: .now() + .seconds(60),
-            execute: refreshArticles
-        )
     }
     
     private func discoverArticles() throws {

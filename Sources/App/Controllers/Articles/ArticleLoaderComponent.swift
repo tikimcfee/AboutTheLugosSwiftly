@@ -10,6 +10,7 @@ class VaporArticleLoader {
     lazy var component: ArticleLoaderComponent = {
         let root = rootSubDirectory(named: "articles")
         let comp = ArticleLoaderComponent(rootDirectory: root)
+        
         comp.$loadingError
             .receive(on: DispatchQueue.global())
             .compactMap { $0 }
