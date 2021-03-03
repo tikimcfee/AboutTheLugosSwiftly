@@ -10,6 +10,7 @@ final class AppTests: XCTestCase {
 	var VAPOR_APP: Application! 
 	
 	override func setUp() {
+        continueAfterFailure = false
 		VAPOR_APP = Application(.testing)
 	}
 	
@@ -106,6 +107,15 @@ final class ArticleFileTests: XCTestCase {
         
         let rereadFile = try loadXXXXTestArticle()
         XCTAssert(file.meta == rereadFile.meta, "Article meta does not match :\n\nOriginal:\n\(file.meta)\n\nReread:\n\(rereadFile.meta)")
+    }
+    
+    func testBadUrl() throws {
+        LOG_PAD()
+        
+        let testLoader = ArticleLoaderComponent(rootDirectory: URL(fileURLWithPath: "/0o0o;..mm///...l_??!2!?.,.,..a,s.,da.s?"))
+        testLoader.refreshArticles()
+        XCTAssert(testLoader.loadingError != nil, "Didn't have an error somehow.. that's not good.")
+        XCTAssert(testLoader.currentArticles.count == 0, "There are articles in a failed-loading state, which is probably bad")
     }
     
     func testSaveAndDeleteArticle() throws {
