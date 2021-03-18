@@ -1,7 +1,7 @@
 import Foundation
 
 
-public class ArticleLoaderComponent: ObservableObject {
+public class ArticleLoaderComponent {
     public typealias Cycle = Result<(ArticleList, ArticleIndex), Error>
     public typealias RefreshHandler = (Cycle) -> Void
     
