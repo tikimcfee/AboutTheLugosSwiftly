@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 public class ArticleLoaderComponent: ObservableObject {
     private let loadingQueue: DispatchQueue
