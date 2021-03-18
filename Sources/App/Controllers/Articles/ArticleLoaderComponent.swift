@@ -1,23 +1,22 @@
 import Foundation
 import Vapor
 import SharedAppTools
-import Combine
 
 class VaporArticleLoader {
     let vaporApp: Application
-    var cancellables = Set<AnyCancellable>()
     
     lazy var component: ArticleLoaderComponent = {
         let root = rootSubDirectory(named: "articles")
-        let comp = ArticleLoaderComponent(rootDirectory: root)
-        
-        comp.$loadingError
-            .receive(on: DispatchQueue.global())
-            .compactMap { $0 }
-            .sink { [weak vaporApp] error in vaporApp?.logger.report(error: error) }
-            .store(in: &cancellables)
-        
-        return comp
+        let component = ArticleLoaderComponent(rootDirectory: root)
+        component.handler = { [weak vaporApp] cycle in
+            switch cycle {
+            case .failure(let error):
+                vaporApp?.logger.report(error: error)
+            case .success:
+                break
+            }
+        }
+        return component
     }()
     
     var currentArticles: [ArticleFile] { component.currentArticles }

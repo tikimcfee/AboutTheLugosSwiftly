@@ -1,16 +1,20 @@
 import Foundation
-import Combine
+
 
 public class ArticleLoaderComponent: ObservableObject {
+    public typealias Cycle = Result<(ArticleList, ArticleIndex), Error>
+    public typealias RefreshHandler = (Cycle) -> Void
+    
     private let loadingQueue: DispatchQueue
     private let loader = ArticleLoader()
     public var rootDirectory: URL {
         didSet { callAndSet() }
     }
     
-    @Published public var currentArticles = ArticleList()
-    @Published public var articleLookup = ArticleIndex()
-    @Published public var loadingError: Error? = nil
+    public var currentArticles = ArticleList()
+    public var articleLookup = ArticleIndex()
+    public var loadingError: Error? = nil
+    public var handler: RefreshHandler? = nil
     
     public init(rootDirectory: URL) {
         self.rootDirectory = rootDirectory
@@ -34,8 +38,10 @@ public class ArticleLoaderComponent: ObservableObject {
     private func callAndSet() {
         do {
             try discoverArticles()
+            handler?(.success((currentArticles, articleLookup)))
         } catch {
             loadingError = error
+            handler?(.failure(error))
         }
     }
     
