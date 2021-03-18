@@ -1,5 +1,11 @@
 import Foundation
 
+// Woah guys; Darwin split did some weird things
+// https://github.com/SwiftyBeaver/SwiftyBeaver/commit/c81dcbcb3ca9ff70d8b4c0ca111bc10b39b43dca
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 let root = "https://api.github.com"
 let jsonDecoder = JSONDecoder()
 
