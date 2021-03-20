@@ -92,6 +92,15 @@
         }
       },
       {
+        "package": "swift-log-file",
+        "repositoryURL": "https://github.com/tikimcfee/swift-log-file",
+        "state": {
+          "branch": "main",
+          "revision": "5196b7300b4ca095d90a080bbe4c9018a8c99ddb",
+          "version": null
+        }
+      },
+      {
         "package": "MarkdownKit",
         "repositoryURL": "https://github.com/tikimcfee/swift-markdownkit",
         "state": {
@@ -141,8 +150,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-ssl.git",
         "state": {
           "branch": null,
-          "revision": "6b6c0582d626f1999c52217458cb99dc03fa2721",
-          "version": "2.10.5"
+          "revision": "07c160b8724ee53a4b776328122be6338ff12bf2",
+          "version": "2.11.0"
         }
       },
       {
@@ -168,8 +177,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "062a4088a26ff9e41daacb8aa311f0289232d814",
-          "version": "4.41.4"
+          "revision": "b6e1bc692de72db5f7c7adc232441cc39c5dee2e",
+          "version": "4.41.6"
         }
       },
       {
@@ -179,6 +188,15 @@
           "branch": null,
           "revision": "2b06a70dfcfa76a2e5079f60e3ae911511f09db0",
           "version": "2.1.2"
+        }
+      },
+      {
+        "package": "XCGLogger",
+        "repositoryURL": "https://github.com/DaveWoodCom/XCGLogger.git",
+        "state": {
+          "branch": null,
+          "revision": "a9c4667b247928a29bdd41be2ec2c8d304215a54",
+          "version": "7.0.1"
         }
       }
     ]

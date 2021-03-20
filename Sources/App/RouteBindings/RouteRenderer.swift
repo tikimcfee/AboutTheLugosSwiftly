@@ -98,6 +98,12 @@ public class VaporRouteRenderingContainer {
                 self.loadArticle(req)
             }
         }
+        
+        vaporApp.get(["logs"]) { req in
+            req.backgrounded {
+                self.loadLogs(req)
+            }
+        }
     }
 
     private func loadHome(_ req: Request) -> Response {
@@ -142,6 +148,27 @@ public class VaporRouteRenderingContainer {
             [.raw(markdownHtml)]
         }.asHtmlResponse
     }
+    
+    private func loadLogs(_ req: Request) -> Response {
+        do {
+            let logFile = rawFile(named: "applogs.txt")
+            let logs = try String(contentsOf: logFile)
+            let logBox = Node.textarea(
+                attributes: [.style(safe:
+"""
+font-family: 'Courier New', monospace;
+min-height: 1024px;
+"""),
+                ],
+                logs
+            )
+            return baseRenderer.renderRouteWith {
+                [logBox]
+            }.asHtmlResponse
+        } catch {
+            return HTMLResponse.makeErrorResponse(from: error.localizedDescription)
+        }
+    }
 }
 
 private extension Request {
@@ -183,5 +210,9 @@ private class HTMLResponse {
 
     static func makeResponse(from body: String) -> Response {
         Response(status: .ok, headers: headers(), body: .init(string: body))
+    }
+    
+    static func makeErrorResponse(from message: String) -> Response {
+        Response(status: .internalServerError, headers: headers(), body: .init(string: message))
     }
 }

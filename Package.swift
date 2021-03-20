@@ -18,14 +18,11 @@ let package = Package(
          ),
     ],
     dependencies: [
-        // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
-        // HTML DSL BBTTYLLOLKTHXBY
         .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", from: "0.3.1"),
-        // Markdown -> HTML
         .package(name: "MarkdownKit", url: "https://github.com/tikimcfee/swift-markdownkit", from: "1.0.5"),
-		// CSS STUFF!
-        .package(name: "CSS",  url: "https://github.com/tikimcfee/swift-css", .branch("master"))
+        .package(name: "CSS",  url: "https://github.com/tikimcfee/swift-css", .branch("master")),
+        .package(name: "swift-log-file", url: "https://github.com/tikimcfee/swift-log-file", .branch("main"))
     ],
     targets: [
         .target(
@@ -46,6 +43,7 @@ let package = Package(
             name: "App",
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
+                .product(name: "FileLogging", package: "swift-log-file"),
                 .target(name: "StylesData"),
                 .target(name: "SharedAppTools"),
                 .target(name: "VendorNetworking"),
