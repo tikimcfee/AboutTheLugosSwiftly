@@ -96,7 +96,7 @@
         "repositoryURL": "https://github.com/tikimcfee/swift-log-file",
         "state": {
           "branch": "main",
-          "revision": "5196b7300b4ca095d90a080bbe4c9018a8c99ddb",
+          "revision": "fa1609b1364fdd605037da94471c449741c90e51",
           "version": null
         }
       },
@@ -188,15 +188,6 @@
           "branch": null,
           "revision": "2b06a70dfcfa76a2e5079f60e3ae911511f09db0",
           "version": "2.1.2"
-        }
-      },
-      {
-        "package": "XCGLogger",
-        "repositoryURL": "https://github.com/DaveWoodCom/XCGLogger.git",
-        "state": {
-          "branch": null,
-          "revision": "a9c4667b247928a29bdd41be2ec2c8d304215a54",
-          "version": "7.0.1"
         }
       }
     ]
