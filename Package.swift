@@ -1,27 +1,27 @@
-// swift-tools-version:5.3.0
+// swift-tools-version:5.2.0
 
 import PackageDescription
 
 let package = Package(
     name: "VaporLugos",
     platforms: [
-       .macOS(.v10_15),
+        .macOS(.v10_15),
     ],
     products: [
-         .library(
+        .library(
             name: "VaporLugos",
             targets: [
                 "StylesData",
                 "SharedAppTools",
-                "VendorNetworking"
+                "VendorNetworking",
             ]
-         ),
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
         .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", from: "0.3.1"),
         .package(name: "MarkdownKit", url: "https://github.com/tikimcfee/swift-markdownkit", from: "1.0.5"),
-        .package(name: "CSS",  url: "https://github.com/tikimcfee/swift-css", .branch("master")),
+        .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master")),
     ],
     targets: [
         .target(
@@ -50,13 +50,13 @@ let package = Package(
                 // Enable better optimizations when building in Release configuration. Despite the use of
                 // the `.unsafeFlags` construct required by SwiftPM, this flag is recommended for Release
                 // builds. See <https://github.com/swift-server/guides#building-for-production> for details.
-                .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
+                .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release)),
             ]
         ),
         .target(
             name: "Run",
             dependencies: [
-                .target(name: "App")
+                .target(name: "App"),
             ]
         ),
         .target(
@@ -73,6 +73,6 @@ let package = Package(
                 .target(name: "App"),
                 .product(name: "XCTVapor", package: "vapor"),
             ]
-        )
+        ),
     ]
 )

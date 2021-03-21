@@ -1,7 +1,7 @@
 # ================================
 # Build image
 # ================================
-FROM swift:5.3-focal as build
+FROM swift:5.2-focal as build
 
 # Install OS updates and, if needed, sqlite3
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
@@ -29,7 +29,7 @@ RUN swift build --enable-test-discovery -c release
 WORKDIR /staging
 
 # Copy main executable to staging area
-RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./
+RUN cp "$(swift build --enable-test-discovery --package-path /build -c release --show-bin-path)/Run" ./
 
 # Copy any resouces from the public directory and views directory if the directories exist
 # Ensure that by default, neither the directory nor any of its contents are writable.
@@ -39,7 +39,7 @@ RUN [ -d /build/Resources ] && { mv /build/Resources ./Resources && chmod -R a-w
 # ================================
 # Run image
 # ================================
-FROM swift:5.3-focal-slim
+FROM swift:5.2-focal-slim
 
 # Make sure all system packages are up to date.
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && \
