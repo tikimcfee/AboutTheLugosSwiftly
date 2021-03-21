@@ -3,8 +3,50 @@ import Vapor
 import Logging
 import SharedAppTools
 
+// --- Logging Glue ---
+
+private final class LuLogHandler: LogHandler {
+    var metadata: Logger.Metadata = [:]
+    var logLevel: Logger.Level = .trace
+    
+    subscript(metadataKey key: String) -> Logger.Metadata.Value? {
+        get { metadata[key] }
+        set(newValue) { metadata[key] = newValue }
+    }
+    
+    func log(level: Logger.Level,
+             message: Logger.Message,
+             metadata: Logger.Metadata?,
+             source: String, file: String, function: String, line: UInt) {
+        let toLog = makeString(message, mergedMeta(from: metadata))
+        switch level {
+        case .trace: LuLog.trace(toLog)
+        case .debug: LuLog.debug(toLog)
+        case .error: LuLog.error(toLog)
+        default: LuLog.external(toLog)
+        }
+    }
+    
+    func makeString(_ message: Logger.Message, _ meta: Logger.Metadata) -> String {
+        "|| \(meta.debugDescription) || \(message)"
+    }
+    
+    func mergedMeta(from newMeta: Logger.Metadata?) -> Logger.Metadata {
+        guard let newMeta = newMeta else { return metadata }
+        return metadata.merging(newMeta) { _, newKey in newKey }
+    }
+}
+
+
+// ---
+
 var cliConfiguredEnvironment = try Environment.detect()
-try LoggingSystem.bootstrap(from: &cliConfiguredEnvironment)
+LoggingSystem.bootstrap { label in
+    MultiplexLogHandler([
+        ConsoleLogger(label: label, console: Terminal()),
+        LuLogHandler()
+    ])
+}
 
 let _Vapor_app = Application(cliConfiguredEnvironment)
 

@@ -44,25 +44,24 @@ public class VaporRouteRenderingContainer {
 
     public init(vaporApp: Vapor.Application) {
         self.vaporApp = vaporApp
-        self.articleLoader = VaporArticleLoader(vaporApp: vaporApp)
-        self.articleRenderer = ArticleRenderer(vaporApp: vaporApp, loader: articleLoader)
+        self.articleLoader = VaporArticleLoader()
+        self.articleRenderer = ArticleRenderer(loader: articleLoader)
 
         configureServer()
         buildRoutes()
     }
 
     func configureServer() {
-//        vaporApp.http.server.configuration.hostname = "0.0.0.0"
         generateAssets()
     }
 
     func generateAssets() {
-        vaporApp.logger.info("Generating assets..")
+        LuLog.trace("Generating assets...")
         do {
             try AssetWriter.writeAllAssets()
-            vaporApp.logger.info("assets done")
+            LuLog.trace("Assets generated.")
         } catch {
-            vaporApp.logger.report(error: error)
+            LuLog.error(error.localizedDescription)
         }
     }
 
@@ -151,7 +150,7 @@ public class VaporRouteRenderingContainer {
     
     private func loadLogs(_ req: Request) -> Response {
         do {
-            let logFile = rawFile(named: "applogs.txt")
+            let logFile = LuLog.globalLogFile
             let logs = try String(contentsOf: logFile)
             let logBox = Node.textarea(
                 attributes: [.style(safe:

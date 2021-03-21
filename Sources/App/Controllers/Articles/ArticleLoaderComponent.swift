@@ -3,30 +3,33 @@ import Vapor
 import SharedAppTools
 
 class VaporArticleLoader {
-    let vaporApp: Application
     
-    lazy var component: ArticleLoaderComponent = {
-        let root = rootSubDirectory(named: "articles")
-        let component = ArticleLoaderComponent(rootDirectory: root)
-        component.handler = { [weak vaporApp] cycle in
-            switch cycle {
-            case .failure(let error):
-                vaporApp?.logger.report(error: error)
-            case .success:
-                break
-            }
-        }
-        return component
-    }()
-    
+    lazy var component: ArticleLoaderComponent = makeComponent()
     var currentArticles: [ArticleFile] { component.currentArticles }
+        
+    init() {
+        component.kickoffArticleLoading()
+    }
     
     public subscript(_ id: String) -> ArticleFile? {
         get { component.articleLookup[id] }
     }
+}
+
+extension VaporArticleLoader {
+    private func makeComponent() -> ArticleLoaderComponent {
+        let root = rootSubDirectory(named: "articles")
+        let component = ArticleLoaderComponent(rootDirectory: root)
+        component.handler = didRefresh(_:)
+        return component
+    }
     
-    init(vaporApp: Application) {
-        self.vaporApp = vaporApp
-        component.kickoffArticleLoading()
+    private func didRefresh(_ cycle: ArticleLoaderComponent.Cycle) {
+        switch cycle {
+        case .failure(let error):
+            LuLog.error(error.localizedDescription)
+        case .success:
+            break
+        }
     }
 }

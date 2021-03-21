@@ -1,8 +1,7 @@
 import MarkdownKit
-import Vapor
+import SharedAppTools
 
 struct ArticleRenderer {
-    let vaporApp: Vapor.Application
     let loader: VaporArticleLoader
 
     func render(articleId: String, _ completed: (String) -> Void) {
@@ -15,7 +14,7 @@ struct ArticleRenderer {
             let html = HtmlGenerator.standard.generate(doc: parsed)
             completed(html)
         } catch {
-            vaporApp.logger.report(error: error)
+            LuLog.error(error.localizedDescription)
         }
     }
 
@@ -29,7 +28,7 @@ struct ArticleRenderer {
             let markdown = HtmlGenerator.standard.generate(doc: parsed)
             return markdown
         } catch {
-            vaporApp.logger.report(error: error)
+            LuLog.error(error.localizedDescription)
             return ""
         }
     }

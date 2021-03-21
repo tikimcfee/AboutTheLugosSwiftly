@@ -17,7 +17,7 @@ struct HTMLRenderer {
                 for: rootFile(named: "global.css")
             )
         } catch {
-            vaporApp.logger.report(error: error)
+            LuLog.error(error.localizedDescription)
             return ""
         }
     }
