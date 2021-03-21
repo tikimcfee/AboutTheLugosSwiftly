@@ -1,11 +1,11 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3.0
 
 import PackageDescription
 
 let package = Package(
     name: "VaporLugos",
     platforms: [
-//       .macOS(.v10_15)
+       .macOS(.v10_15),
     ],
     products: [
          .library(
