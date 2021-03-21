@@ -46,7 +46,7 @@ public struct GithubApiHelper {
 
         URLSession.shared.dataTask(with: request) {
             do {
-                let decodedTuple: ([CommitHandle], Data) = try decodeJson($0, $1, $2)
+                let decodedTuple: ([CommitHandle], Data) = try self.decodeJson($0, $1, $2)
                 handler(.success(.init(handles: decodedTuple.0, source: decodedTuple.1)))
             } catch {
                 handler(.failure(error))
