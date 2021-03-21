@@ -92,15 +92,6 @@
         }
       },
       {
-        "package": "swift-log-file",
-        "repositoryURL": "https://github.com/tikimcfee/swift-log-file",
-        "state": {
-          "branch": "main",
-          "revision": "fa1609b1364fdd605037da94471c449741c90e51",
-          "version": null
-        }
-      },
-      {
         "package": "MarkdownKit",
         "repositoryURL": "https://github.com/tikimcfee/swift-markdownkit",
         "state": {
