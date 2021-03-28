@@ -31,18 +31,22 @@ public class ArticleLoaderComponent {
         self.rootDirectory = rootDirectory
         self.loadingQueue = DispatchQueue(label: "ArticleLoader:\(rootDirectory.lastPathComponent)", qos: .background)
     }
+    
+    public func blockingreArticlesRefresh() {
+        loadingQueue.sync(execute: callAndSet)
+    }
 
     public func kickoffArticleLoading() {
         loadingQueue.async {
-            self.refreshArticles()
+            self.queueArticlesRefresh()
         }
     }
     
-    public func refreshArticles() {
+    private func queueArticlesRefresh() {
         callAndSet()
         loadingQueue.asyncAfter(
             deadline: .now() + .seconds(60),
-            execute: refreshArticles
+            execute: queueArticlesRefresh
         )
     }
     

@@ -113,7 +113,7 @@ final class ArticleFileTests: XCTestCase {
         LOG_PAD()
         
         let testLoader = ArticleLoaderComponent(rootDirectory: URL(fileURLWithPath: "/0o0o;..mm///...l_??!2!?.,.,..a,s.,da.s?"))
-        testLoader.refreshArticles()
+        testLoader.blockingreArticlesRefresh()
         XCTAssert(testLoader.loadingError != nil, "Didn't have an error somehow.. that's not good.")
         XCTAssert(testLoader.currentArticles.count == 0, "There are articles in a failed-loading state, which is probably bad")
     }
@@ -123,7 +123,7 @@ final class ArticleFileTests: XCTestCase {
         
         let articleCreator = ArticleCreator(rootDirectory: testDataDirectory)
         let testLoader = ArticleLoaderComponent(rootDirectory: testDataDirectory)
-        testLoader.refreshArticles()
+        testLoader.blockingreArticlesRefresh()
     
         let originalFile = try loadXXXXTestArticle()
         let originalBody = try originalFile.articleContents()
@@ -132,7 +132,7 @@ final class ArticleFileTests: XCTestCase {
         updatedMeta.id = "simple-gibbons-liverspots"
         
         try articleCreator.createNew(article: originalBody, with: updatedMeta)
-        testLoader.refreshArticles()
+        testLoader.blockingreArticlesRefresh()
         guard let reloadedFile = testLoader.articleLookup[updatedMeta.id] else {
             XCTFail("Failed to reload newly written article")
             return
