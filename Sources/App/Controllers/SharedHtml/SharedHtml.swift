@@ -17,7 +17,7 @@ struct HTMLRenderer {
                 for: rootFile(named: "global.css")
             )
         } catch {
-            LuLog.error(error.localizedDescription)
+            AppLog.error(error.localizedDescription)
             return ""
         }
     }

@@ -56,12 +56,12 @@ public class VaporRouteRenderingContainer {
     }
 
     func generateAssets() {
-        LuLog.trace("Generating assets...")
+        AppLog.trace("Generating assets...")
         do {
             try AssetWriter.writeAllAssets()
-            LuLog.trace("Assets generated.")
+            AppLog.trace("Assets generated.")
         } catch {
-            LuLog.error(error.localizedDescription)
+            AppLog.error(error.localizedDescription)
         }
     }
 
@@ -150,7 +150,7 @@ public class VaporRouteRenderingContainer {
     
     private func loadLogs(_ req: Request) -> Response {
         do {
-            let logFile = LuLog.globalLogFile
+            let logFile = AppLog.globalLogFile
             let logs = try String(contentsOf: logFile)
             let logBox = Node.textarea(
                 attributes: [.style(safe:

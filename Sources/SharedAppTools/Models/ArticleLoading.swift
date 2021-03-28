@@ -12,16 +12,16 @@ public class ArticleLoaderComponent {
     }
     
     public var currentArticles = ArticleList() {
-        didSet { LuLog.trace("Set \(currentArticles.count) articles") }
+        didSet { AppLog.trace("Set \(currentArticles.count) articles") }
     }
     
     public var articleLookup = ArticleIndex() {
-        didSet { LuLog.trace("Set index: \(articleLookup.keys.joined(separator: ","))") }
+        didSet { AppLog.trace("Set index: \(articleLookup.keys.joined(separator: ","))") }
     }
     
     public var loadingError: Error? = nil {
         didSet { if let error = loadingError {
-            LuLog.error("ArticleLoaderError -> \(error.localizedDescription)")
+            AppLog.error("ArticleLoaderError -> \(error.localizedDescription)")
         } }
     }
     
@@ -48,7 +48,7 @@ public class ArticleLoaderComponent {
     
     private func callAndSet() {
         do {
-            LuLog.trace("Starting article lookup.")
+            AppLog.trace("Starting article lookup.")
             try discoverArticles()
             handler?(.success((currentArticles, articleLookup)))
         } catch {
@@ -61,14 +61,14 @@ public class ArticleLoaderComponent {
         var allArticles = ArticleList()
         var index = ArticleIndex()
         try allArticleDirectories().forEach { articleDirectory in
-            LuLog.trace("Checking directory: \(articleDirectory.path)")
+            AppLog.trace("Checking directory: \(articleDirectory.path)")
             try self.loader.sniff(articleDirectory, into: &allArticles, index: &index)
         }
         (currentArticles, articleLookup) = (allArticles, index)
     }
     
     private func allArticleDirectories() throws -> [URL] {
-        LuLog.trace("Query root directory: \(rootDirectory)")
+        AppLog.trace("Query root directory: \(rootDirectory)")
         return try rootDirectory.defaultContents().filter {
             $0.hasDirectoryPath
         }

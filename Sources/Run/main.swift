@@ -5,7 +5,7 @@ import SharedAppTools
 
 // --- Logging Glue ---
 
-private final class LuLogHandler: LogHandler {
+private final class AppLogHandler: LogHandler {
     var metadata: Logger.Metadata = [:]
     var logLevel: Logger.Level = .trace
     
@@ -20,10 +20,10 @@ private final class LuLogHandler: LogHandler {
              source: String, file: String, function: String, line: UInt) {
         let toLog = makeString(message, mergedMeta(from: metadata))
         switch level {
-        case .trace: LuLog.trace(toLog)
-        case .debug: LuLog.debug(toLog)
-        case .error: LuLog.error(toLog)
-        default: LuLog.external(toLog)
+        case .trace: AppLog.trace(toLog)
+        case .debug: AppLog.debug(toLog)
+        case .error: AppLog.error(toLog)
+        default: AppLog.external(toLog)
         }
     }
     
@@ -44,7 +44,7 @@ var cliConfiguredEnvironment = try Environment.detect()
 LoggingSystem.bootstrap { label in
     MultiplexLogHandler([
         ConsoleLogger(label: label, console: Terminal()),
-        LuLogHandler()
+        AppLogHandler()
     ])
 }
 

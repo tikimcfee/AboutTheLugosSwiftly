@@ -27,7 +27,7 @@ extension VaporArticleLoader {
     private func didRefresh(_ cycle: ArticleLoaderComponent.Cycle) {
         switch cycle {
         case .failure(let error):
-            LuLog.error(error.localizedDescription)
+            AppLog.error(error.localizedDescription)
         case .success:
             break
         }

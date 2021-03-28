@@ -14,7 +14,7 @@ struct ArticleRenderer {
             let html = HtmlGenerator.standard.generate(doc: parsed)
             completed(html)
         } catch {
-            LuLog.error(error.localizedDescription)
+            AppLog.error(error.localizedDescription)
         }
     }
 
@@ -28,7 +28,7 @@ struct ArticleRenderer {
             let markdown = HtmlGenerator.standard.generate(doc: parsed)
             return markdown
         } catch {
-            LuLog.error(error.localizedDescription)
+            AppLog.error(error.localizedDescription)
             return ""
         }
     }
