@@ -83,12 +83,12 @@
         }
       },
       {
-        "package": "Html",
+        "package": "swift-html",
         "repositoryURL": "https://github.com/tikimcfee/swift-html",
         "state": {
-          "branch": null,
-          "revision": "3ffc3fc8feb5fde766f5f44fd06ebc030f0721f3",
-          "version": "0.3.1"
+          "branch": "main",
+          "revision": "e4705137c07da3b20797d6893e8a89f1ac2cffba",
+          "version": null
         }
       },
       {
@@ -104,9 +104,9 @@
         "package": "MarkdownKit",
         "repositoryURL": "https://github.com/tikimcfee/swift-markdownkit",
         "state": {
-          "branch": null,
-          "revision": "20f722a5909be4fede4ec4903db46780379cea9e",
-          "version": "1.0.5"
+          "branch": "master",
+          "revision": "a2cd2e68719cf8b7eb4cf9b5da5d84900d97c3c9",
+          "version": null
         }
       },
       {

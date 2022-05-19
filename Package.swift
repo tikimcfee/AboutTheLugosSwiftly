@@ -18,8 +18,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", from: "0.3.1"),
-        .package(name: "MarkdownKit", url: "https://github.com/tikimcfee/swift-markdownkit", from: "1.0.5"),
+        .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", .branch("main")),
+        .package(name: "MarkdownKit", url: "https://github.com/tikimcfee/swift-markdownkit", .branch("master")),
         .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master")),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.59.1"),
     ],
