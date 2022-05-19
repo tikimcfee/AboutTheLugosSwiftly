@@ -941,3 +941,264 @@
 1652932020.09480596--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
 1652932020.09741211--trace	Set 7 articles
 1652932020.09792900--trace	Set index: reloading-things,the-dump-of-dumping,hello-world,more-about-words,swiftoceans,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i
+1652932086.09019613--trace	Starting article lookup.
+1652932086.09094191--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932086.09179497--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932086.09239197--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932086.09285998--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932086.09346390--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932086.09389997--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932086.09437895--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932086.09481096--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932086.09506202--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932086.09544516--trace	Set 7 articles
+1652932086.09562683--trace	Set index: what-is-going-on-who-am-i,swiftoceans,the-dump-of-dumping,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things
+1652932152.09130597--trace	Starting article lookup.
+1652932152.09203506--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932152.09282017--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932152.09371090--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932152.09468985--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932152.09553194--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932152.09606600--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932152.09647799--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932152.09696484--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932152.09717512--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932152.09764600--trace	Set 7 articles
+1652932152.09779596--trace	Set index: reloading-things,what-is-going-on-who-am-i,the-dump-of-dumping,more-about-words,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,swiftoceans,hello-world
+1652932218.09235597--trace	Starting article lookup.
+1652932218.09326005--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932218.09437799--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932218.09521198--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932218.09598017--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932218.09662700--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932218.09727502--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932218.09795499--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932218.09862304--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932218.09906697--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932218.09972191--trace	Set 7 articles
+1652932218.10010505--trace	Set index: swiftoceans,reloading-things,hello-world,what-is-going-on-who-am-i,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,more-about-words,the-dump-of-dumping
+1652932284.09346008--trace	Starting article lookup.
+1652932284.09420800--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932284.09508705--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932284.09565783--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932284.09617496--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932284.09677100--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932284.09730387--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932284.09774399--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932284.09820294--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932284.09856415--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932284.09901404--trace	Set 7 articles
+1652932284.09924793--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,hello-world,the-dump-of-dumping,more-about-words,reloading-things,swiftoceans,what-is-going-on-who-am-i
+1652932350.09456897--trace	Starting article lookup.
+1652932350.09552503--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932350.09665108--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932350.09751511--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932350.09821701--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932350.09890890--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932350.09974289--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932350.10036802--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932350.10102987--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932350.10145712--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932350.10206413--trace	Set 7 articles
+1652932350.10236096--trace	Set index: swiftoceans,reloading-things,hello-world,what-is-going-on-who-am-i,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,the-dump-of-dumping,more-about-words
+1652932416.09782100--trace	Starting article lookup.
+1652932416.09863615--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932416.09939384--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932416.10016704--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932416.10090113--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932416.10148907--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932416.10215187--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932416.10288501--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932416.10365200--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932416.10402489--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932416.10478115--trace	Set 7 articles
+1652932416.10508204--trace	Set index: what-is-going-on-who-am-i,swiftoceans,the-dump-of-dumping,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things
+1652932482.10189199--trace	Starting article lookup.
+1652932482.10287714--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932482.10378408--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932482.10441685--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932482.10494184--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932482.10541296--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932482.10582495--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932482.10636616--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932482.10677600--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932482.10701299--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932482.10736203--trace	Set 7 articles
+1652932482.10755706--trace	Set index: more-about-words,what-is-going-on-who-am-i,the-dump-of-dumping,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,hello-world,reloading-things,swiftoceans
+1652932548.10585999--trace	Starting article lookup.
+1652932548.10705090--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932548.10829210--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932548.10923386--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932548.11002398--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932548.11079407--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932548.11151791--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932548.11220598--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932548.11296105--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932548.11346292--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932548.11419010--trace	Set 7 articles
+1652932548.11461687--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,hello-world,the-dump-of-dumping,more-about-words,reloading-things,swiftoceans,what-is-going-on-who-am-i
+1652932614.10695887--trace	Starting article lookup.
+1652932614.10806084--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932614.10942984--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932614.11038804--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932614.11113596--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932614.11180115--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932614.11245894--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932614.11308718--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932614.11377597--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932614.11422586--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932614.11543202--trace	Set 7 articles
+1652932614.11605310--trace	Set index: reloading-things,what-is-going-on-who-am-i,the-dump-of-dumping,more-about-words,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,swiftoceans,hello-world
+1652932680.10796309--trace	Starting article lookup.
+1652932680.10859394--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932680.10943198--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932680.10994005--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932680.11030483--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932680.11065102--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932680.11099291--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932680.11131907--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932680.11171389--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932680.11198807--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932680.11235285--trace	Set 7 articles
+1652932680.11255097--trace	Set index: swiftoceans,reloading-things,hello-world,what-is-going-on-who-am-i,more-about-words,the-dump-of-dumping,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932746.10921502--trace	Starting article lookup.
+1652932746.10989094--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932746.11057496--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932746.11126089--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932746.11182308--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932746.11229300--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932746.11275601--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932746.11319304--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932746.11376905--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932746.11485195--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932746.11548805--trace	Set 7 articles
+1652932746.11569905--trace	Set index: swiftoceans,the-dump-of-dumping,more-about-words,hello-world,reloading-things,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i
+1652932812.11034918--trace	Starting article lookup.
+1652932812.11113787--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932812.11208105--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932812.11317301--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932812.11425114--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932812.11510515--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932812.11601806--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932812.11653996--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932812.11709690--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932812.11736298--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932812.11789298--trace	Set 7 articles
+1652932812.11808109--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,the-dump-of-dumping,hello-world,reloading-things,more-about-words,swiftoceans,what-is-going-on-who-am-i
+1652932878.11136913--trace	Starting article lookup.
+1652932878.11345696--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932878.11505795--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932878.11609316--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932878.11670589--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932878.11719513--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932878.11829901--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932878.11896300--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932878.11963296--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932878.12141705--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932878.12308884--trace	Set 7 articles
+1652932878.12360191--trace	Set index: what-is-going-on-who-am-i,swiftoceans,the-dump-of-dumping,more-about-words,reloading-things,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932944.12130404--trace	Starting article lookup.
+1652932944.12274218--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652932944.12339902--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652932944.12417603--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652932944.12504196--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652932944.12585902--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652932944.12647390--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652932944.12690115--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652932944.12743497--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652932944.12771702--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652932944.12819695--trace	Set 7 articles
+1652932944.12838101--trace	Set index: what-is-going-on-who-am-i,swiftoceans,the-dump-of-dumping,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things
+1652933010.12553096--trace	Starting article lookup.
+1652933010.12692118--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652933010.12739396--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652933010.12814713--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652933010.12902904--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652933010.12967300--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652933010.13039207--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652933010.13109016--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652933010.13189983--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652933010.13227415--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652933010.13298082--trace	Set 7 articles
+1652933010.13326788--trace	Set index: reloading-things,the-dump-of-dumping,hello-world,more-about-words,swiftoceans,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i
+1652933076.12177515--trace	Starting article lookup.
+1652933076.12315416--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652933076.12388086--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652933076.12481213--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652933076.12566090--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652933076.12636709--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652933076.12706995--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652933076.12773395--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652933076.12857795--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/2A1BC22D-6359-4AE8-AB15-14D9A96B1047
+1652933076.12896299--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652933076.12978411--trace	Set 7 articles
+1652933076.13008904--trace	Set index: what-is-going-on-who-am-i,swiftoceans,the-dump-of-dumping,more-about-words,reloading-things,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652971909.15953493--debug	|| [:] || Could not load .env.development file: open(file:oFlag:mode:): No such file or directory (errno: 2)
+1652971909.17499399--trace	|| [:] || Running on shared EventLoopGroup. Not shutting down EventLoopGroup.
+1652971909.17526913--debug	|| [:] || Could not load .env file: open(file:oFlag:mode:): No such file or directory (errno: 2)
+1652971909.17533302--trace	|| [:] || Running on shared EventLoopGroup. Not shutting down EventLoopGroup.
+1652971909.17537689--trace	|| [:] || Running on shared EventLoopGroup. Not shutting down EventLoopGroup.
+1652971909.17548203--trace	Generating assets...
+1652971909.17937517--trace	Assets generated.
+1652971909.18011403--trace	Starting article lookup.
+1652971909.18035984--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652971909.18079400--external	|| [:] || Server starting on http://127.0.0.1:8080
+1652971909.18138599--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652971909.18902493--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652971909.18983507--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652971909.19021106--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652971909.19060898--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652971909.19099903--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652971909.19151688--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652971909.19197607--trace	Set 7 articles
+1652971909.19212198--trace	Set index: swiftoceans,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,more-about-words,reloading-things,the-dump-of-dumping,hello-world,what-is-going-on-who-am-i
+1652971953.27557397--trace	|| [:] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "none"), ("Sec-Fetch-User", "?1")] }
+1652971953.27649593--trace	|| ["request-id": 951AE76B-7B05-4954-AC7A-633ABAFCB09A] || Decoded HTTP part: end
+1652971953.27724600--external	|| ["request-id": 951AE76B-7B05-4954-AC7A-633ABAFCB09A] || GET /
+1652971954.48005199--trace	|| ["request-id": 951AE76B-7B05-4954-AC7A-633ABAFCB09A] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971954.48045588--trace	|| ["request-id": AF0A6FD9-A750-484E-A9BC-AD864F6F2F38] || Decoded HTTP part: end
+1652971954.48094416--external	|| ["request-id": AF0A6FD9-A750-484E-A9BC-AD864F6F2F38] || GET /articles
+1652971955.11687613--trace	|| ["request-id": AF0A6FD9-A750-484E-A9BC-AD864F6F2F38] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/reloading-things", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971955.11727715--trace	|| ["request-id": 952EB0A1-1DE3-4BFA-9551-9EC4305C14EB] || Decoded HTTP part: end
+1652971955.11780906--external	|| ["request-id": 952EB0A1-1DE3-4BFA-9551-9EC4305C14EB] || GET /articles/reloading-things
+1652971959.48316813--trace	|| ["request-id": 952EB0A1-1DE3-4BFA-9551-9EC4305C14EB] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/reloading-things", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971959.48367310--trace	|| ["request-id": FD237626-5A8F-4D73-8931-0712F1810D88] || Decoded HTTP part: end
+1652971959.48442698--external	|| ["request-id": FD237626-5A8F-4D73-8931-0712F1810D88] || GET /articles/reloading-things
+1652971961.83521414--trace	|| ["request-id": FD237626-5A8F-4D73-8931-0712F1810D88] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971961.83590198--trace	|| ["request-id": A9C4F1B8-780D-4DBB-9E89-A11C9FB1713C] || Decoded HTTP part: end
+1652971961.83650303--external	|| ["request-id": A9C4F1B8-780D-4DBB-9E89-A11C9FB1713C] || GET /articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652971966.48373318--trace	|| ["request-id": A9C4F1B8-780D-4DBB-9E89-A11C9FB1713C] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/the-dump-of-dumping", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971966.48439503--trace	|| ["request-id": 239BC9E5-28FD-4136-BDE6-0A9F8B844D06] || Decoded HTTP part: end
+1652971966.48502493--external	|| ["request-id": 239BC9E5-28FD-4136-BDE6-0A9F8B844D06] || GET /articles/the-dump-of-dumping
+1652971975.18570304--trace	Starting article lookup.
+1652971975.18652201--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1652971975.18751192--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1652971975.18867493--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1652971975.18964005--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1652971975.19021988--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1652971975.19072199--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1652971975.19121313--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1652971975.19189215--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1652971975.19262600--trace	Set 7 articles
+1652971975.19292784--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things,hello-world,more-about-words,the-dump-of-dumping,what-is-going-on-who-am-i,swiftoceans
+1652971981.36525297--trace	|| ["request-id": 239BC9E5-28FD-4136-BDE6-0A9F8B844D06] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/the-dump-of-dumping", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971981.36584616--trace	|| ["request-id": 405BE225-C064-470D-9447-D9BE64D1BE24] || Decoded HTTP part: end
+1652971981.36642313--external	|| ["request-id": 405BE225-C064-470D-9447-D9BE64D1BE24] || GET /articles/the-dump-of-dumping
+1652971983.01665306--trace	|| ["request-id": 405BE225-C064-470D-9447-D9BE64D1BE24] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/the-dump-of-dumping", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971983.01722288--trace	|| ["request-id": DE10CBD4-398F-4DEF-9EC0-5BB1EA0A9AFE] || Decoded HTTP part: end
+1652971983.01785088--external	|| ["request-id": DE10CBD4-398F-4DEF-9EC0-5BB1EA0A9AFE] || GET /articles/the-dump-of-dumping
+1652971988.68291497--trace	|| ["request-id": DE10CBD4-398F-4DEF-9EC0-5BB1EA0A9AFE] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles/the-dump-of-dumping"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971988.68335795--trace	|| ["request-id": 13CC2BA0-973D-4086-9097-7210EB0FFA70] || Decoded HTTP part: end
+1652971988.68378210--external	|| ["request-id": 13CC2BA0-973D-4086-9097-7210EB0FFA70] || GET /
+1652971989.30096197--trace	|| ["request-id": 13CC2BA0-973D-4086-9097-7210EB0FFA70] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/about", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971989.30141687--trace	|| ["request-id": D216A2EC-C80C-4962-8C27-EF2FF9790345] || Decoded HTTP part: end
+1652971989.30186510--external	|| ["request-id": D216A2EC-C80C-4962-8C27-EF2FF9790345] || GET /about
+1652971989.96874285--trace	|| ["request-id": D216A2EC-C80C-4962-8C27-EF2FF9790345] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/about"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971989.96929789--trace	|| ["request-id": 4BCA86ED-C4C6-473F-BF33-CBA95BF6CD3D] || Decoded HTTP part: end
+1652971989.96976709--external	|| ["request-id": 4BCA86ED-C4C6-473F-BF33-CBA95BF6CD3D] || GET /articles
+1652971991.46814203--trace	|| ["request-id": 4BCA86ED-C4C6-473F-BF33-CBA95BF6CD3D] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/more-about-words", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971991.46865892--trace	|| ["request-id": 2AD689F3-4158-4B27-8BAD-F027968D98DC] || Decoded HTTP part: end
+1652971991.46914387--external	|| ["request-id": 2AD689F3-4158-4B27-8BAD-F027968D98DC] || GET /articles/more-about-words
+1652971995.16983795--trace	|| ["request-id": 2AD689F3-4158-4B27-8BAD-F027968D98DC] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/swiftoceans", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1652971995.17042017--trace	|| ["request-id": 72584681-251F-4884-B1F8-2DE375AEDC2B] || Decoded HTTP part: end
+1652971995.17099094--external	|| ["request-id": 72584681-251F-4884-B1F8-2DE375AEDC2B] || GET /articles/swiftoceans

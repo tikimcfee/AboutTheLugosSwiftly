@@ -19,15 +19,14 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", .branch("main")),
-        .package(name: "MarkdownKit", url: "https://github.com/tikimcfee/swift-markdownkit", .branch("master")),
         .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master")),
+        .package(name: "PerfectMarkdown", url: "https://github.com/PerfectlySoft/Perfect-Markdown", .branch("master")),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.59.1"),
     ],
     targets: [
         .target(
             name: "StylesData",
             dependencies: [
-                "MarkdownKit",
                 "Html",
                 "CSS",
             ]
@@ -41,6 +40,7 @@ let package = Package(
         .target(
             name: "App",
             dependencies: [
+                .product(name: "PerfectMarkdown", package: "PerfectMarkdown"),
                 .product(name: "Vapor", package: "vapor"),
                 .target(name: "StylesData"),
                 .target(name: "SharedAppTools"),

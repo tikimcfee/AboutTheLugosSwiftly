@@ -2,7 +2,6 @@ import Vapor
 import Html
 import StylesData
 import SharedAppTools
-import MarkdownKit
 
 public class VaporRouteRenderingContainer {
 

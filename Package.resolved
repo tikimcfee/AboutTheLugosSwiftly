@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "PerfectMarkdown",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Markdown",
+        "state": {
+          "branch": "master",
+          "revision": "ec159e763d95cd81125f80e4d616049fa9ee389c",
+          "version": null
+        }
+      },
+      {
         "package": "routing-kit",
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
@@ -98,15 +107,6 @@
           "branch": null,
           "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
           "version": "1.4.2"
-        }
-      },
-      {
-        "package": "MarkdownKit",
-        "repositoryURL": "https://github.com/tikimcfee/swift-markdownkit",
-        "state": {
-          "branch": "master",
-          "revision": "a2cd2e68719cf8b7eb4cf9b5da5d84900d97c3c9",
-          "version": null
         }
       },
       {

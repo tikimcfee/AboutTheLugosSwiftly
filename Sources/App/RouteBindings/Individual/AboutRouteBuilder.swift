@@ -1,8 +1,12 @@
 import Foundation
 import Vapor
 import SharedAppTools
-import MarkdownKit
 import Html
+import PerfectMarkdown
+
+enum MarkdownError: Error {
+    case markdownNotParsed
+}
 
 struct AboutRouteBuilder: AppRouteBuilderType {
     let appRoute: AppRoutes = .about
@@ -20,13 +24,18 @@ struct AboutRouteBuilder: AppRouteBuilderType {
         do {
             let aboutFile = rawFile(named: "about.md")
             let aboutContents = try String(contentsOf: aboutFile)
-            let markdown = MarkdownParser.standard.parse(aboutContents)
-            let aboutHtml = HtmlGenerator.standard.generate(doc: markdown)
+            
+            guard let markdownHTML = aboutContents.markdownToHTML else {
+                throw MarkdownError.markdownNotParsed
+            }
+            
             return baseRenderer.renderRouteWith{[
-                .raw(aboutHtml)
+                .raw(markdownHTML)
             ]}.asHtmlResponse
         } catch {
+            AppLog.error("Response error: \(error)")
             return request.redirect(to: AppRoutes.root.rawValue)
         }
     }
 }
+

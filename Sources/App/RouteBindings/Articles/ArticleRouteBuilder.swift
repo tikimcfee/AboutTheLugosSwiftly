@@ -2,7 +2,6 @@ import Foundation
 import Vapor
 import SharedAppTools
 import Html
-import MarkdownKit
 
 struct ArticleRouteBuilder: AppRouteBuilderType {
     let appRoute: AppRoutes = .articles
