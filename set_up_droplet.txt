@@ -1,0 +1,26 @@
+# setup user
+ufw allow OpenSSH
+ufw enable
+adduser vapor
+usermod -aG sudo vapor
+rsync --archive --chown=vapor:vapor ~/.ssh /home/vapor
+
+# updates v1
+sudo apt-get update
+sudo apt-get install clang libicu-dev libatomic1 build-essential pkg-config
+
+# pull toolchain
+wget https://download.swift.org/swift-5.6-release/ubuntu1804/swift-5.6-RELEASE/swift-5.6-RELEASE-ubuntu18.04.tar.gz
+tar xzf swift-5.6-RELEASE-ubuntu18.04.tar.gz
+
+# install toolchain
+sudo mkdir /swift
+sudo mkdir /swift
+sudo mv swift-5.6-RELEASE-ubuntu18.04 /swift/5.6
+sudo ln -s /swift/5.6/usr/bin/swift /usr/bin/swift
+
+## vapor shit ##
+
+# pull dependencies
+sudo apt-get install openssl libssl-dev zlib1g-dev libsqlite3-dev
+sudo ufw allow http
