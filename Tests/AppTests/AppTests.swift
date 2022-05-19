@@ -4,7 +4,6 @@ import CSS
 import StylesData
 import VendorNetworking
 import SharedAppTools
-import PerfectMarkdown
 import XCTest
 
 final class AppTests: XCTestCase {
@@ -182,8 +181,7 @@ final class StylingTests: XCTestCase {
     
     
     func testMarkdown() throws {
-        let markdown = try XCTUnwrap(RAW_MARKDOWN_TEST.markdownToHTML, "Must create markdown from raw text")
-        print(markdown)
+        
     }
     
 	func testParent() {

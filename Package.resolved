@@ -29,21 +29,21 @@
         }
       },
       {
+        "package": "Down",
+        "repositoryURL": "https://github.com/johnxnguyen/Down",
+        "state": {
+          "branch": "master",
+          "revision": "e754ab1c80920dd51a8e08290c912ac1c2ac8b58",
+          "version": null
+        }
+      },
+      {
         "package": "multipart-kit",
         "repositoryURL": "https://github.com/vapor/multipart-kit.git",
         "state": {
           "branch": null,
           "revision": "0d55c35e788451ee27222783c7d363cb88092fab",
           "version": "4.5.2"
-        }
-      },
-      {
-        "package": "PerfectMarkdown",
-        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Markdown",
-        "state": {
-          "branch": "master",
-          "revision": "ec159e763d95cd81125f80e4d616049fa9ee389c",
-          "version": null
         }
       },
       {

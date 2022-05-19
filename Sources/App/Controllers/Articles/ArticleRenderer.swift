@@ -1,4 +1,5 @@
 import SharedAppTools
+import Down
 
 struct ArticleRenderer {
     let loader: VaporArticleLoader
@@ -9,9 +10,7 @@ struct ArticleRenderer {
 
         do {
             let rawArticle = try article.articleContents()
-            guard let markdownHTML = rawArticle.markdownToHTML else {
-                throw MarkdownError.markdownNotParsed
-            }
+            let markdownHTML = try Down(markdownString: rawArticle).toHTML()
             return markdownHTML
         } catch {
             AppLog.error(error.localizedDescription)
