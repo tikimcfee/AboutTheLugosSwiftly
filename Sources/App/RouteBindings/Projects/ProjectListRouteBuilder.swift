@@ -3,10 +3,10 @@ import Vapor
 import SharedAppTools
 import Html
 
-struct ArticleListRouteBuilder: AppRouteBuilderType {
-    let appRoute: AppRoutes = .articles
+struct ProjectListRouteBuilder: AppRouteBuilderType {
+    let appRoute: AppRoutes = .projects
     let baseRenderer: HTMLRenderer
-    let articleLoader: VaporArticleLoader
+    let projectLoader: VaporArticleLoader
     
     func attach(to app: Vapor.Application) {
         app.get(appRoute.path) { request in
@@ -19,7 +19,7 @@ struct ArticleListRouteBuilder: AppRouteBuilderType {
     func response(from request: Request) -> Response {
         let orderedList = Node.ol(
             .fragment(
-                articleLoader.currentFiles.map { article in
+                projectLoader.currentFiles.map { article in
                     article.listItem(appRoute)
                 }
             )

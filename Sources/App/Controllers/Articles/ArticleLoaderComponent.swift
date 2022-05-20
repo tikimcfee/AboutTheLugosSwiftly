@@ -3,11 +3,12 @@ import Vapor
 import SharedAppTools
 
 class VaporArticleLoader {
-    
+    let subDirectoryName: String
     lazy var component: ArticleLoaderComponent = makeComponent()
-    var currentArticles: [ArticleFile] { component.currentArticles }
+    var currentFiles: [ArticleFile] { component.currentArticles }
         
-    init() {
+    init(subDirectoryName: String) {
+        self.subDirectoryName = subDirectoryName
         component.kickoffArticleLoading()
     }
     
@@ -18,7 +19,7 @@ class VaporArticleLoader {
 
 extension VaporArticleLoader {
     private func makeComponent() -> ArticleLoaderComponent {
-        let root = rootSubDirectory(named: "articles")
+        let root = rootSubDirectory(named: subDirectoryName)
         let component = ArticleLoaderComponent(rootDirectory: root)
         component.handler = didRefresh(_:)
         return component

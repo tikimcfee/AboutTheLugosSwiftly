@@ -8,7 +8,8 @@ public class VaporRouteRenderingContainer {
     let vaporApp: Vapor.Application
 
     lazy var sharedRenderer: HTMLRenderer = HTMLRenderer(vaporApp: vaporApp)
-    lazy var sharedLoader: VaporArticleLoader = VaporArticleLoader()
+    lazy var articleLoader: VaporArticleLoader = VaporArticleLoader(subDirectoryName: "articles")
+    lazy var projectLoader: VaporArticleLoader = VaporArticleLoader(subDirectoryName: "projects")
 
     public init(vaporApp: Vapor.Application) {
         self.vaporApp = vaporApp
@@ -41,8 +42,12 @@ public class VaporRouteRenderingContainer {
         
         let appRoutes: [AppRouteBuilderType] = [
             HomeRouteBuilder(baseRenderer: sharedRenderer),
-            ArticleListRouteBuilder(baseRenderer: sharedRenderer, articleLoader: sharedLoader),
-            ArticleRouteBuilder(baseRenderer: sharedRenderer, articleRenderer: ArticleRenderer(loader: sharedLoader))
+            
+            ArticleListRouteBuilder(baseRenderer: sharedRenderer, articleLoader: articleLoader),
+            ArticleRouteBuilder(baseRenderer: sharedRenderer, articleRenderer: ArticleRenderer(loader: articleLoader)),
+            
+            ProjectListRouteBuilder(baseRenderer: sharedRenderer, projectLoader: projectLoader),
+            ProjectRouteBuilder(baseRenderer: sharedRenderer, articleRenderer: ArticleRenderer(loader: projectLoader)),
         ]
         
         appRoutes.forEach { builder in

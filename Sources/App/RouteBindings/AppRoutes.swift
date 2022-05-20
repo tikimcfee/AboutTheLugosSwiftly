@@ -7,6 +7,8 @@ enum AppRoutes: String, CustomStringConvertible {
     case article
     case logs
     
+    case projects
+    
     var path: PathComponent { .constant(rawValue) }
     var absolute: String { "/\(rawValue)" }
     
@@ -17,17 +19,20 @@ enum AppRoutes: String, CustomStringConvertible {
             return "Home"
         case .article:
             return "Article"
-        case .logs:
-            return "Server Logs"
         
         // Groups / subpages
         case .articles:
             return "Articles"
-        
+        case .projects:
+            return "Projects"
+            
+        // Debug
+        case .logs:
+            return "Server Logs"
         }
     }
     
     static var displayRoutes: [AppRoutes] {
-        [.root, .articles]
+        [.root, .articles, .projects]
     }
 }

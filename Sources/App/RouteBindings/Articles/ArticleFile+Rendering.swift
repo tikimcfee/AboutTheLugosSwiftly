@@ -2,15 +2,15 @@ import Html
 import SharedAppTools
 
 extension ArticleFile {
-    private var articlePath: String {
-        AppRoutes.articles.absolute + "/" + meta.id
+    func listItem(_ base: AppRoutes) -> ChildOf<Tag.Ol> {
+        .li([htmlLink(base)])
     }
     
-    var listItem: ChildOf<Tag.Ol> {
-        .li([htmlLink])
+    func htmlLink(_ base: AppRoutes) -> Node {
+        .a(attributes: [.href(articlePath(base))], .span(.text(meta.name)))
     }
     
-    var htmlLink: Node {
-        .a(attributes: [.href(articlePath)], .span(.text(meta.name)))
+    private func articlePath(_ base: AppRoutes) -> String {
+        base.absolute + "/" + meta.id
     }
 }
