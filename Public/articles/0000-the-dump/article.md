@@ -7,3 +7,5 @@
   - Yeah.
 * [Ubuntu network configs](https://ubuntu.com/server/docs/network-configuration)
   - What does `lshw` do?
+* [Rethinking Visual Programming in Go](https://divan.dev/posts/visual_programming_go/)
+  - Singlehandedly reinvigorated me to continue exploring my 3d visualization project. Can't give this enough thanks.

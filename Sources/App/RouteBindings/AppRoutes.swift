@@ -3,7 +3,6 @@ import Vapor
 
 enum AppRoutes: String, CustomStringConvertible {
     case root = ""
-    case about
     case articles
     case article
     case logs
@@ -13,20 +12,22 @@ enum AppRoutes: String, CustomStringConvertible {
     
     var description: String {
         switch self {
+        // Single page
         case .root:
             return "Home"
-        case .about:
-            return "About"
         case .article:
             return "Article"
-        case .articles:
-            return "Articles"
         case .logs:
             return "Server Logs"
+        
+        // Groups / subpages
+        case .articles:
+            return "Articles"
+        
         }
     }
     
     static var displayRoutes: [AppRoutes] {
-        [.root, .about, .articles]
+        [.root, .articles]
     }
 }

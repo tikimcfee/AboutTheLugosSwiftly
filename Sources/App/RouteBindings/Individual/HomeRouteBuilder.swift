@@ -2,6 +2,7 @@ import Foundation
 import Vapor
 import SharedAppTools
 import Html
+import Down
 
 struct HomeRouteBuilder: AppRouteBuilderType {
     let appRoute: AppRoutes = .root
@@ -16,8 +17,17 @@ struct HomeRouteBuilder: AppRouteBuilderType {
     }
     
     func response(from request: Request) -> Response {
-        baseRenderer.renderRouteWith {
-            [.raw("Hello, world!")]
-        }.asHtmlResponse
+        do {
+            let aboutFile = rawFile(named: "about.md")
+            let aboutContents = try String(contentsOf: aboutFile)
+            let markdownHTML = try Down(markdownString: aboutContents).toHTML()
+            
+            return baseRenderer.renderRouteWith{[
+                .raw(markdownHTML)
+            ]}.asHtmlResponse
+        } catch {
+            AppLog.error("Response error: \(error)")
+            return request.redirect(to: AppRoutes.root.rawValue)
+        }
     }
 }

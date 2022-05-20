@@ -1202,3 +1202,437 @@
 1652971995.16983795--trace	|| ["request-id": 2AD689F3-4158-4B27-8BAD-F027968D98DC] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles/swiftoceans", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
 1652971995.17042017--trace	|| ["request-id": 72584681-251F-4884-B1F8-2DE375AEDC2B] || Decoded HTTP part: end
 1652971995.17099094--external	|| ["request-id": 72584681-251F-4884-B1F8-2DE375AEDC2B] || GET /articles/swiftoceans
+1653007193.44955802--debug	|| [:] || Could not load .env.development file: open(file:oFlag:mode:): No such file or directory (errno: 2)
+1653007193.46072388--trace	|| [:] || Running on shared EventLoopGroup. Not shutting down EventLoopGroup.
+1653007193.46093988--debug	|| [:] || Could not load .env file: open(file:oFlag:mode:): No such file or directory (errno: 2)
+1653007193.46100616--trace	|| [:] || Running on shared EventLoopGroup. Not shutting down EventLoopGroup.
+1653007193.46106291--trace	|| [:] || Running on shared EventLoopGroup. Not shutting down EventLoopGroup.
+1653007193.46116495--trace	Generating assets...
+1653007193.46459293--trace	Assets generated.
+1653007193.46539211--trace	Starting article lookup.
+1653007193.46569109--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007193.46598387--external	|| [:] || Server starting on http://127.0.0.1:8080
+1653007193.46617413--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007193.47520304--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007193.47651100--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007193.47732687--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007193.47835302--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007193.47914791--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007193.48005795--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007193.48092794--trace	Set 7 articles
+1653007193.48125100--trace	Set index: more-about-words,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,hello-world,the-dump-of-dumping,swiftoceans,what-is-going-on-who-am-i,reloading-things
+1653007198.49277997--trace	|| [:] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "none"), ("Sec-Fetch-User", "?1")] }
+1653007198.49310017--trace	|| ["request-id": A6C7BCD6-FC0D-4D57-B4DE-422632CFC670] || Decoded HTTP part: end
+1653007198.49344802--external	|| ["request-id": A6C7BCD6-FC0D-4D57-B4DE-422632CFC670] || GET /
+1653007198.79619408--trace	|| ["request-id": A6C7BCD6-FC0D-4D57-B4DE-422632CFC670] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/favicon.ico", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "image/avif,image/webp,*/*"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/"), ("Sec-Fetch-Dest", "image"), ("Sec-Fetch-Mode", "no-cors"), ("Sec-Fetch-Site", "same-origin")] }
+1653007198.79660702--trace	|| ["request-id": 3D090FD8-ACDA-47D5-B163-69E0E32E7CC2] || Decoded HTTP part: end
+1653007198.79713011--external	|| ["request-id": 3D090FD8-ACDA-47D5-B163-69E0E32E7CC2] || GET /favicon.ico
+1653007198.79779291--trace	|| ["request-id": 3D090FD8-ACDA-47D5-B163-69E0E32E7CC2] || Response already sent, skipping request body.
+1653007198.79872298--debug	|| ["request-id": 3D090FD8-ACDA-47D5-B163-69E0E32E7CC2] || Unhandled HTTP server error: read(descriptor:pointer:size:): Connection reset by peer (errno: 54)
+1653007203.97402501--trace	|| ["request-id": 3D090FD8-ACDA-47D5-B163-69E0E32E7CC2] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1653007203.97456002--trace	|| ["request-id": C4587EA8-0921-4EF6-B5A6-3332AEDBF7CF] || Decoded HTTP part: end
+1653007203.97507811--external	|| ["request-id": C4587EA8-0921-4EF6-B5A6-3332AEDBF7CF] || GET /
+1653007205.13943815--trace	|| ["request-id": C4587EA8-0921-4EF6-B5A6-3332AEDBF7CF] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1653007205.13989687--trace	|| ["request-id": 4185792E-3A89-471B-83D2-AB9DD22FC312] || Decoded HTTP part: end
+1653007205.14036417--external	|| ["request-id": 4185792E-3A89-471B-83D2-AB9DD22FC312] || GET /articles
+1653007205.97379112--trace	|| ["request-id": 4185792E-3A89-471B-83D2-AB9DD22FC312] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/articles"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1653007205.97424507--trace	|| ["request-id": A2A91C27-0F46-4863-AF6A-74CADC663083] || Decoded HTTP part: end
+1653007205.97474384--external	|| ["request-id": A2A91C27-0F46-4863-AF6A-74CADC663083] || GET /
+1653007206.70139098--trace	|| ["request-id": A2A91C27-0F46-4863-AF6A-74CADC663083] || Decoded HTTP part: head: HTTPRequestHead { method: GET, uri: "/articles", version: HTTP/1.1, headers: [("Host", "127.0.0.1:8080"), ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"), ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"), ("Accept-Language", "en-US,en;q=0.5"), ("Accept-Encoding", "gzip, deflate, br"), ("DNT", "1"), ("Connection", "keep-alive"), ("Referer", "http://127.0.0.1:8080/"), ("Upgrade-Insecure-Requests", "1"), ("Sec-Fetch-Dest", "document"), ("Sec-Fetch-Mode", "navigate"), ("Sec-Fetch-Site", "same-origin"), ("Sec-Fetch-User", "?1")] }
+1653007206.70177889--trace	|| ["request-id": 114D82D8-92D0-4B71-852C-6DDDEF3C8D0B] || Decoded HTTP part: end
+1653007206.70222807--external	|| ["request-id": 114D82D8-92D0-4B71-852C-6DDDEF3C8D0B] || GET /articles
+1653007259.33510113--trace	Starting article lookup.
+1653007259.33729410--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007259.33877993--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007259.34010887--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007259.34107494--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007259.34181404--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007259.34248996--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007259.34314704--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007259.34397197--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007259.34477901--trace	Set 7 articles
+1653007259.34504700--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,more-about-words,hello-world,swiftoceans,the-dump-of-dumping,what-is-going-on-who-am-i,reloading-things
+1653007325.34209490--trace	Starting article lookup.
+1653007325.34306812--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007325.34416199--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007325.34533215--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007325.34628487--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007325.34697795--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007325.34764004--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007325.34829283--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007325.34914017--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007325.34999514--trace	Set 7 articles
+1653007325.35026884--trace	Set index: reloading-things,swiftoceans,the-dump-of-dumping,hello-world,more-about-words,what-is-going-on-who-am-i,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007391.33176899--trace	Starting article lookup.
+1653007391.33260798--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007391.33359599--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007391.33468485--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007391.33555508--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007391.33625317--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007391.33690310--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007391.33754683--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007391.33840704--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007391.33936501--trace	Set 7 articles
+1653007391.33965206--trace	Set index: what-is-going-on-who-am-i,swiftoceans,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things,the-dump-of-dumping
+1653007457.33552885--trace	Starting article lookup.
+1653007457.33635712--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007457.33729315--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007457.33797693--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007457.33847284--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007457.33898783--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007457.33945608--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007457.33999491--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007457.34066606--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007457.34130001--trace	Set 7 articles
+1653007457.34159803--trace	Set index: what-is-going-on-who-am-i,swiftoceans,reloading-things,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,the-dump-of-dumping
+1653007523.33479691--trace	Starting article lookup.
+1653007523.33540487--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007523.33614588--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007523.33663702--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007523.33697891--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007523.33725500--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007523.33752704--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007523.33778501--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007523.33806896--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007523.33835602--trace	Set 7 articles
+1653007523.33848810--trace	Set index: hello-world,swiftoceans,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i,the-dump-of-dumping,reloading-things,more-about-words
+1653007589.32691503--trace	Starting article lookup.
+1653007589.32766390--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007589.32873797--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007589.32960200--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007589.33027697--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007589.33090997--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007589.33156395--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007589.33214283--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007589.33278513--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007589.33339214--trace	Set 7 articles
+1653007589.33369684--trace	Set index: what-is-going-on-who-am-i,swiftoceans,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things,the-dump-of-dumping
+1653007655.33053684--trace	Starting article lookup.
+1653007655.33226800--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007655.33294916--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007655.33378410--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007655.33505201--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007655.33587003--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007655.33694696--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007655.33762407--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007655.33845901--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007655.33897805--trace	Set 7 articles
+1653007655.33911896--trace	Set index: more-about-words,swiftoceans,the-dump-of-dumping,reloading-things,what-is-going-on-who-am-i,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,hello-world
+1653007721.32364511--trace	Starting article lookup.
+1653007721.32566404--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007721.32663798--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007721.32779789--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007721.32872486--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007721.32950997--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007721.33020687--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007721.33086395--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007721.33171797--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007721.33258796--trace	Set 7 articles
+1653007721.33285618--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,more-about-words,hello-world,swiftoceans,the-dump-of-dumping,what-is-going-on-who-am-i,reloading-things
+1653007787.32203603--trace	Starting article lookup.
+1653007787.32371283--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007787.32458591--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007787.32705593--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007787.32799387--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007787.32879591--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007787.32945108--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007787.33010006--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007787.33087897--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007787.33172083--trace	Set 7 articles
+1653007787.33203197--trace	Set index: more-about-words,reloading-things,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i,swiftoceans,the-dump-of-dumping,hello-world
+1653007853.32439613--trace	Starting article lookup.
+1653007853.32524300--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007853.32631207--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007853.32713103--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007853.32781601--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007853.32848310--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007853.32905602--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007853.32962418--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007853.33021998--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007853.33087683--trace	Set 7 articles
+1653007853.33114004--trace	Set index: what-is-going-on-who-am-i,swiftoceans,more-about-words,hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,reloading-things,the-dump-of-dumping
+1653007919.31876707--trace	Starting article lookup.
+1653007919.31957197--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007919.32066917--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007919.32152891--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007919.32222891--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007919.32283998--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007919.32345605--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0004-modd-is-cool
+1653007919.32407999--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007919.32473803--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007919.32535505--trace	Set 7 articles
+1653007919.32565212--trace	Set index: more-about-words,swiftoceans,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i,the-dump-of-dumping,reloading-things,hello-world
+1653007985.31714392--trace	Starting article lookup.
+1653007985.31765199--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653007985.31831694--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653007985.31874394--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653007985.31908607--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653007985.31941295--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653007985.31972408--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653007985.32006216--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653007985.32039499--trace	Set 6 articles
+1653007985.32054090--trace	Set index: hello-world,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,swiftoceans,what-is-going-on-who-am-i,the-dump-of-dumping,more-about-words
+1653008051.31551790--trace	Starting article lookup.
+1653008051.31640911--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008051.31745505--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008051.31827497--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008051.31889009--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008051.31961298--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653008051.32040095--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653008051.32103491--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653008051.32164383--trace	Set 6 articles
+1653008051.32190084--trace	Set index: what-is-going-on-who-am-i,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,hello-world,more-about-words,the-dump-of-dumping,swiftoceans
+1653008117.31391287--trace	Starting article lookup.
+1653008117.31479788--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008117.31583905--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008117.31668496--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008117.31736302--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008117.31801796--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653008117.31863904--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653008117.31924105--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653008117.31987906--trace	Set 6 articles
+1653008117.32016206--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,what-is-going-on-who-am-i,swiftoceans,hello-world,the-dump-of-dumping,more-about-words
+1653008183.31227684--trace	Starting article lookup.
+1653008183.31314301--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008183.31417513--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008183.31506395--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008183.31578588--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008183.31643605--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653008183.31707597--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653008183.31770515--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653008183.31833100--trace	Set 6 articles
+1653008183.31859899--trace	Set index: hello-world,what-is-going-on-who-am-i,the-dump-of-dumping,16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,swiftoceans,more-about-words
+1653008249.31063986--trace	Starting article lookup.
+1653008249.31136799--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008249.31223011--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008249.31279993--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008249.31320190--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008249.31356597--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0003-doing-things
+1653008249.31394100--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/16C8F170-1E5D-4FBF-BB53-E669B9F55DD8
+1653008249.31433010--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/swiftoceans
+1653008249.31469798--trace	Set 6 articles
+1653008249.31484795--trace	Set index: 16C8F170-1E5D-4FBF-BB53-E669B9F55DD8,more-about-words,hello-world,the-dump-of-dumping,what-is-going-on-who-am-i,swiftoceans
+1653008315.30902004--trace	Starting article lookup.
+1653008315.30956316--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008315.31032515--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008315.31106710--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008315.31158590--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008315.31198215--trace	Set 3 articles
+1653008315.31211996--trace	Set index: more-about-words,hello-world,the-dump-of-dumping
+1653008381.27111483--trace	Starting article lookup.
+1653008381.27205205--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008381.27300000--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008381.27388287--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008381.27459717--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008381.27522802--trace	Set 3 articles
+1653008381.27551508--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653008447.26511598--trace	Starting article lookup.
+1653008447.26584601--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008447.26671600--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008447.26755810--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008447.26825905--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008447.26893997--trace	Set 3 articles
+1653008447.26919508--trace	Set index: more-about-words,the-dump-of-dumping,hello-world
+1653008513.26246691--trace	Starting article lookup.
+1653008513.26325798--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008513.26419997--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008513.26507092--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008513.26576710--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008513.26637888--trace	Set 3 articles
+1653008513.26663208--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653008579.25984001--trace	Starting article lookup.
+1653008579.26075792--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008579.26165605--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008579.26248789--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008579.26313591--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008579.26375198--trace	Set 3 articles
+1653008579.26401496--trace	Set index: more-about-words,hello-world,the-dump-of-dumping
+1653008645.25859404--trace	Starting article lookup.
+1653008645.25932002--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008645.26010084--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008645.26087403--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008645.26145101--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008645.26187992--trace	Set 3 articles
+1653008645.26201606--trace	Set index: more-about-words,the-dump-of-dumping,hello-world
+1653008711.25849915--trace	Starting article lookup.
+1653008711.25912499--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008711.25984001--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008711.26092100--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008711.26191282--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008711.26269197--trace	Set 3 articles
+1653008711.26292896--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653008777.25841093--trace	Starting article lookup.
+1653008777.25926018--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008777.26015091--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008777.26097703--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008777.26165485--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008777.26228595--trace	Set 3 articles
+1653008777.26257706--trace	Set index: more-about-words,the-dump-of-dumping,hello-world
+1653008843.25827408--trace	Starting article lookup.
+1653008843.25920606--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008843.26016283--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008843.26103687--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008843.26170206--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008843.26230597--trace	Set 3 articles
+1653008843.26255298--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653008909.25825596--trace	Starting article lookup.
+1653008909.25924397--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008909.26020598--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008909.26108503--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008909.26174498--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008909.26237917--trace	Set 3 articles
+1653008909.26263094--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653008975.24409795--trace	Starting article lookup.
+1653008975.24500704--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653008975.24595594--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653008975.24678397--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653008975.24752188--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653008975.24816895--trace	Set 3 articles
+1653008975.24847603--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009041.24141097--trace	Starting article lookup.
+1653009041.24191403--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009041.24249983--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009041.24286604--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009041.24315906--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009041.24343801--trace	Set 3 articles
+1653009041.24354792--trace	Set index: more-about-words,hello-world,the-dump-of-dumping
+1653009107.23888206--trace	Starting article lookup.
+1653009107.23977089--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009107.24071407--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009107.24157095--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009107.24226618--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009107.24290800--trace	Set 3 articles
+1653009107.24321508--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009173.23591900--trace	Starting article lookup.
+1653009173.23805809--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009173.23906898--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009173.23979497--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009173.24048615--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009173.24102688--trace	Set 3 articles
+1653009173.24114895--trace	Set index: more-about-words,hello-world,the-dump-of-dumping
+1653009239.23748899--trace	Starting article lookup.
+1653009239.23912501--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009239.23983192--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009239.24054503--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009239.24103212--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009239.24144888--trace	Set 3 articles
+1653009239.24157810--trace	Set index: hello-world,more-about-words,the-dump-of-dumping
+1653009305.23102403--trace	Starting article lookup.
+1653009305.23331904--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009305.23593807--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009305.23835087--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009305.23936605--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009305.24014997--trace	Set 3 articles
+1653009305.24039698--trace	Set index: more-about-words,the-dump-of-dumping,hello-world
+1653009371.22841001--trace	Starting article lookup.
+1653009371.22908592--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009371.22982097--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009371.23062205--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009371.23127103--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009371.23187900--trace	Set 3 articles
+1653009371.23211503--trace	Set index: more-about-words,hello-world,the-dump-of-dumping
+1653009437.22582698--trace	Starting article lookup.
+1653009437.22671604--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009437.22771406--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009437.22856283--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009437.22930288--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009437.22993994--trace	Set 3 articles
+1653009437.23020601--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009503.22311401--trace	Starting article lookup.
+1653009503.22405910--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009503.22503805--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009503.22594690--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009503.22667789--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009503.22734594--trace	Set 3 articles
+1653009503.22760010--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653009569.22050714--trace	Starting article lookup.
+1653009569.22142792--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009569.22239208--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009569.22328091--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009569.22401094--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009569.22467399--trace	Set 3 articles
+1653009569.22497892--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009635.21729088--trace	Starting article lookup.
+1653009635.21790195--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009635.21855593--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009635.21921396--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009635.21979499--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009635.22021103--trace	Set 3 articles
+1653009635.22031999--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009701.21620083--trace	Starting article lookup.
+1653009701.21683002--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009701.21740007--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009701.21787214--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009701.21824598--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009701.21870399--trace	Set 3 articles
+1653009701.21885490--trace	Set index: more-about-words,the-dump-of-dumping,hello-world
+1653009767.21263099--trace	Starting article lookup.
+1653009767.21349382--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009767.21441793--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009767.21526504--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009767.21599007--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009767.21665382--trace	Set 3 articles
+1653009767.21694088--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009833.21005797--trace	Starting article lookup.
+1653009833.21099615--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009833.21197605--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009833.21284914--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009833.21356010--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009833.21417904--trace	Set 3 articles
+1653009833.21446705--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653009899.20723009--trace	Starting article lookup.
+1653009899.20815206--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009899.20909095--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009899.21022201--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009899.21108198--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009899.21175814--trace	Set 3 articles
+1653009899.21197891--trace	Set index: the-dump-of-dumping,more-about-words,hello-world
+1653009965.20707202--trace	Starting article lookup.
+1653009965.20787191--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653009965.20883608--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653009965.20966482--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653009965.21033287--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653009965.21097708--trace	Set 3 articles
+1653009965.21124196--trace	Set index: hello-world,more-about-words,the-dump-of-dumping
+1653010031.20721388--trace	Starting article lookup.
+1653010031.20815992--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653010031.20911312--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653010031.20996714--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653010031.21065712--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653010031.21131206--trace	Set 3 articles
+1653010031.21157694--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653010097.20709991--trace	Starting article lookup.
+1653010097.20882797--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653010097.20977211--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653010097.21060205--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653010097.21128798--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653010097.21173811--trace	Set 3 articles
+1653010097.21188593--trace	Set index: hello-world,more-about-words,the-dump-of-dumping
+1653010163.20689487--trace	Starting article lookup.
+1653010163.20774508--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653010163.20860600--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653010163.20923305--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653010163.20969915--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653010163.21010494--trace	Set 3 articles
+1653010163.21024799--trace	Set index: hello-world,more-about-words,the-dump-of-dumping
+1653010229.20687103--trace	Starting article lookup.
+1653010229.20767784--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653010229.20844793--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653010229.20903206--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653010229.20942998--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653010229.20979595--trace	Set 3 articles
+1653010229.20995808--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653010295.19172502--trace	Starting article lookup.
+1653010295.19229102--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653010295.19288206--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653010295.19332886--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653010295.19369793--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653010295.19403505--trace	Set 3 articles
+1653010295.19417000--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653010361.18906403--trace	Starting article lookup.
+1653010361.18990612--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653010361.19081783--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653010361.19167709--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653010361.19233203--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653010361.19293594--trace	Set 3 articles
+1653010361.19317389--trace	Set index: hello-world,the-dump-of-dumping,more-about-words

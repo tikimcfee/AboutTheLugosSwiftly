@@ -41,7 +41,6 @@ public class VaporRouteRenderingContainer {
         
         let appRoutes: [AppRouteBuilderType] = [
             HomeRouteBuilder(baseRenderer: sharedRenderer),
-            AboutRouteBuilder(baseRenderer: sharedRenderer),
             ArticleListRouteBuilder(baseRenderer: sharedRenderer, articleLoader: sharedLoader),
             ArticleRouteBuilder(baseRenderer: sharedRenderer, articleRenderer: ArticleRenderer(loader: sharedLoader))
         ]
