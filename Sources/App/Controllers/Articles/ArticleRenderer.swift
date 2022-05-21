@@ -10,7 +10,7 @@ struct ArticleRenderer {
 
         do {
             let rawArticle = try article.articleContents()
-            let markdownHTML = try Down(markdownString: rawArticle).toHTML()
+            let markdownHTML = try Down(markdownString: rawArticle).toHTML(.smartUnsafe)
             return markdownHTML
         } catch {
             AppLog.error(error.localizedDescription)

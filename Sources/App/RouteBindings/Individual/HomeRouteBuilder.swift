@@ -20,7 +20,7 @@ struct HomeRouteBuilder: AppRouteBuilderType {
         do {
             let aboutFile = rawFile(named: "about.md")
             let aboutContents = try String(contentsOf: aboutFile)
-            let markdownHTML = try Down(markdownString: aboutContents).toHTML()
+            let markdownHTML = try Down(markdownString: aboutContents).toHTML(.smartUnsafe)
             
             return baseRenderer.renderRouteWith{[
                 .raw(markdownHTML)

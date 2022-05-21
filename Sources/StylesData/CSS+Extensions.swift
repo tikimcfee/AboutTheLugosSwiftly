@@ -36,6 +36,12 @@ public struct Preformatted: CSSSelector {
     public init() { }
 }
 
+public struct Divider: CSSSelector {
+    public var selector = "hr"
+    public var children: [CSS] = []
+    public init() { }
+}
+
 public extension CSSSelector {
     func webkitScrollbar() -> CSSSelector {
         Select(selector + "::-webkit-scrollbar", children)

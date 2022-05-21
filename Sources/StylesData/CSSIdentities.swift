@@ -21,18 +21,18 @@ public enum NavigationBarNames: String, CSSClass, CaseIterable {
 
 public struct ColorPalette {
 	public struct Root {
-		public static let siteBackground = Color.black
-		public static let text = Color.rgb(185, 184, 184)
+		public static let siteBackground = Color.linen
+		public static let text = Color.black
 	}
 	public struct NavigationBar {
 		public static let background = Color.rgba(24, 48, 96, 1.0)
-		public static let linkText = Color.peachpuff
-		public static let linkTextHover = Color.white
+        public static let linkText = Color.hex(Int("db6700", radix: 16)!)
+        public static let linkTextHover = Color.blue
 		public static let linkTextVisited = Color.grey
 	}
 	public struct Content {
 		public static let background = Color.rgba(24, 24, 48, 1.0)
-		public static let text = Color.grey
+        public static let text = Color.black
 		public static let preBody = Color.rgba(0, 0, 0, 0.66)
 	}
 }

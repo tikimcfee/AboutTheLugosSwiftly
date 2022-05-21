@@ -4,7 +4,11 @@ html {
  margin: 0px;
  padding: 0px;
  font-family: Tahoma;
- color: rgba(185,184,184,1.0);
+ color: black;
+}
+
+hr {
+ width: 100%;
 }
 
 body pre {
@@ -15,7 +19,7 @@ body pre {
  border-radius: 8px;
 }
 body {
- background: black;
+ background: linen;
  height: 100%;
  width: 100%;
  margin: 0px;
@@ -35,17 +39,13 @@ h2 {
  margin-top: 4px; margin-bottom: 4px;
 }
 
-a:visited {
- color: grey;
-}
-
 a {
- color: peachpuff;
+ color: #DB6700;
  text-decoration: none;
 }
 
 a:hover {
- color: white;
+ color: blue;
  text-decoration: underline;
 }
 
@@ -59,7 +59,6 @@ a:hover {
  padding: 8px;
 }
 .body-navigation-container {
- background: rgba(24,48,96,1.0);
  height: 40%;
  width: 196px;
  margin: 0px;
@@ -70,9 +69,7 @@ a:hover {
 }
 
 .body-content-container {
- background: rgba(24,24,48,1.0);
- display: flex;
- flex-direction: column;
+ display: block;
  margin-left: 208px;
  padding: 8px;
  border-top: 2px solid rgba(24,24,48,1.0); border-right: 2px solid rgba(24,24,48,1.0); border-bottom: 2px solid rgba(24,24,48,1.0); border-left: 2px solid rgba(24,24,48,1.0);
