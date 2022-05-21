@@ -42,6 +42,13 @@ public struct Divider: CSSSelector {
     public init() { }
 }
 
+public struct Video: CSSSelector {
+    public var selector = "video"
+    public var children: [CSS] = []
+    public init() { }
+}
+
+
 public extension CSSSelector {
     func webkitScrollbar() -> CSSSelector {
         Select(selector + "::-webkit-scrollbar", children)

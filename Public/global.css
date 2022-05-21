@@ -97,4 +97,8 @@ a:hover {
  border-radius: 0px;
 }
 
+video {
+ width: 100%;
+}
+
 }

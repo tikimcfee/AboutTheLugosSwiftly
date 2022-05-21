@@ -118,6 +118,10 @@ public struct SiteStyling {
                     margin([.left], .pixels(0))
                     borderRadius(.pixels(0))
                 }
+                
+                Video {
+                    width(.percent(100))
+                }
             }.when(.screen, .maxWidth(.pixels(800)))
         }
     }
