@@ -82,3 +82,73 @@ eadme
 1653100281.22098398--trace	Set index: hello-world,more-about-words,the-dump-of-dumping
 1653100281.22114611--trace	Set 2 articles
 1653100281.22147608--trace	Set index: look-at-that-readme,looka-that-movin-pictures
+1653100347.21763206--trace	Starting article lookup.
+1653100347.21835303--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/
+1653100347.21881199--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653100347.21952295--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/look-at-that-readme
+1653100347.21954703--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653100347.22050810--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/looka-that-movin-pictures
+1653100347.22055006--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653100347.22137904--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653100347.22156000--trace	Set 2 articles
+1653100347.22194815--trace	Set index: look-at-that-readme,looka-that-movin-pictures
+1653100347.22226286--trace	Set 3 articles
+1653100347.22265601--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653100413.19248605--trace	Starting article lookup.
+1653100413.19396400--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653100413.19413710--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/
+1653100413.19470406--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653100413.19474316--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/look-at-that-readme
+1653100413.19553995--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/looka-that-movin-pictures
+1653100413.19616413--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653100413.19645905--trace	Set 2 articles
+1653100413.19670105--trace	Set index: look-at-that-readme,looka-that-movin-pictures
+1653100413.19678783--trace	Set 3 articles
+1653100413.19708800--trace	Set index: hello-world,the-dump-of-dumping,more-about-words
+1653100479.18890810--trace	Starting article lookup.
+1653100479.18984985--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/
+1653100479.19030190--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653100479.19111896--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/look-at-that-readme
+1653100479.19119596--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653100479.19204903--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/looka-that-movin-pictures
+1653100479.19210815--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653100479.19305205--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653100479.19327688--trace	Set 2 articles
+1653100479.19363594--trace	Set index: looka-that-movin-pictures,look-at-that-readme
+1653100479.19380093--trace	Set 3 articles
+1653100479.19419098--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653100545.18844509--trace	Starting article lookup.
+1653100545.18896914--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653100545.18924618--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/
+1653100545.18988299--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+eadme
+1653100545.19042206--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/looka-that-movin-pictures
+1653100545.19062996--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653100545.19122601--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653100545.19167995--trace	Set index: look-at-that-readme,looka-that-movin-pictures
+1653100545.19177794--trace	Set 3 articles
+1653100545.19233513--trace	Set index: the-dump-of-dumping,more-about-words,hello-world
+1653100611.18753099--trace	Starting article lookup.
+1653100611.18968010--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653100611.18701196--trace	Starting article lookup.
+1653100611.18998504--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/
+1653100611.19117403--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/look-at-that-readme
+1653100611.19184399--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/looka-that-movin-pictures
+1653100611.19184494--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653100611.19292116--trace	Set 2 articles
+1653100611.19302893--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653100611.19321394--trace	Set index: look-at-that-readme,looka-that-movin-pictures
+1653100611.19382501--trace	Set 3 articles
+1653100611.19408083--trace	Set index: the-dump-of-dumping,hello-world,more-about-words
+1653100677.18838501--trace	Starting article lookup.
+1653100677.19020510--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/
+1653100677.19044995--trace	Query root directory: file:///Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/
+1653100677.19129896--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0000-the-dump
+1653100677.19137812--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/look-at-that-readme
+1653100677.19248104--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/projects/looka-that-movin-pictures
+1653100677.19248486--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0001-hello-world
+1653100677.19374609--trace	Set 2 articles
+1653100677.19386601--trace	Checking directory: /Users/lugos/udev/xcode_projects/AboutTheLugosSwiftly/Public/articles/0002-more-articles
+1653100677.19411397--trace	Set index: look-at-that-readme,looka-that-movin-pictures
+1653100677.19489908--trace	Set 3 articles
+1653100677.19528294--trace	Set index: the-dump-of-dumping,more-about-words,hello-world
