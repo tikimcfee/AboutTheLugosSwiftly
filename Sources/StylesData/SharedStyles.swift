@@ -48,11 +48,7 @@ public struct SiteStyling {
             Heading(2) {
                 margin([.top, .bottom], .pixels(4))
             }
-
-//            Anchor {
-//                color(ColorPalette.NavigationBar.linkTextVisited)
-//            }.pseudo(.visited)
-
+            
             Anchor {
                 color(ColorPalette.NavigationBar.linkText)
                 textDecoration(.none)
@@ -68,7 +64,6 @@ public struct SiteStyling {
             }
 
             Class(BodyNames.navigationContainer.rawValue) {
-//                background(ColorPalette.NavigationBar.background)
                 height(.percent(40))
                 width(.pixels(196))
                 margin(.pixels(0))
@@ -86,19 +81,14 @@ public struct SiteStyling {
             }
 
             Class(BodyNames.contentContainer.rawValue) {
-//                background(ColorPalette.Content.background)
                 display(.block)
                 
                 margin([.left], .pixels(208))
                 padding(.pixels(8))
-//                padding([.left, .right], .pixels(256))
-//                padding([.top], .pixels(8))
-
+                
                 border(ColorPalette.Content.background, .pixels(2), .solid)
                 borderRadius(.pixels(8))
             }
-            
-            
 
             Group {
                 Class(RootNames.bodyContainer.rawValue) {

@@ -46,17 +46,19 @@ public extension AppLog {
     private static let failedMessageLine = "Message decode failed!".data(using: .utf8)!
     
     private func write(_ file: URL = globalLogFile) {
-        do {
-            if !FileManager.default.fileExists(atPath: file.path) {
-                if !FileManager.default.createFile(atPath: file.path, contents: "".data(using: .utf8)) {
-                    throw LogError.failedToWrite
-                }
-            }
-            let data = description.data(using: .utf8)
-                ?? Self.failedMessageLine
-            try appendToFile(file, data)
-        } catch {
-            print(error)
-        }
+        print(description)
+        
+//        do {
+//            if !FileManager.default.fileExists(atPath: file.path) {
+//                if !FileManager.default.createFile(atPath: file.path, contents: "".data(using: .utf8)) {
+//                    throw LogError.failedToWrite
+//                }
+//            }
+//            let data = description.data(using: .utf8)
+//                ?? Self.failedMessageLine
+//            try appendToFile(file, data)
+//        } catch {
+//            print(error)
+//        }
     }
 }
