@@ -6,6 +6,7 @@ enum AppRoutes: String, CustomStringConvertible {
     case articles
     case article
     case logs
+    case privacyAndTerms
     
     case projects
     
@@ -19,6 +20,10 @@ enum AppRoutes: String, CustomStringConvertible {
             return "Home"
         case .article:
             return "Article"
+            
+        // Raw Stuff
+        case .privacyAndTerms:
+            return "Privacy & Terms"
         
         // Groups / subpages
         case .articles:
@@ -33,6 +38,6 @@ enum AppRoutes: String, CustomStringConvertible {
     }
     
     static var displayRoutes: [AppRoutes] {
-        [.root, .articles, .projects]
+        [.root, .articles, .projects, .privacyAndTerms]
     }
 }

@@ -48,14 +48,16 @@ public class VaporRouteRenderingContainer {
             
             ProjectListRouteBuilder(baseRenderer: sharedRenderer, projectLoader: projectLoader),
             ProjectRouteBuilder(baseRenderer: sharedRenderer, articleRenderer: ArticleRenderer(loader: projectLoader)),
+            
+            PrivacyRouteBuilder(baseRenderer: sharedRenderer)
         ]
         
         appRoutes.forEach { builder in
             builder.attach(to: vaporApp)
         }
         
-        #if DEBUG
-        DebugLogRouteBuilder(baseRenderer: sharedRenderer).attach(to: vaporApp)
-        #endif
+//        #if DEBUG
+//        DebugLogRouteBuilder(baseRenderer: sharedRenderer).attach(to: vaporApp)
+//        #endif
     }
 }
