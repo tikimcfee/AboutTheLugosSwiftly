@@ -14,4 +14,4 @@ Also, here's a picture of me in markdown, because if it shows up, things probabl
 
 # Seeya!
 
-![What A Mug](0001-hello-world/WhatAMug.jpg)
+<img src="0001-hello-world/WhatAMug.jpg" alt="dev face with weird look fist bumping" style="max-width:40%"/>

@@ -1,11 +1,11 @@
-// swift-tools-version:5.2.0
+// swift-tools-version:5.6
 
 import PackageDescription
 
 let package = Package(
     name: "VaporLugos",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v11),
     ],
     products: [
         .library(
@@ -18,17 +18,17 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "Html", url: "https://github.com/tikimcfee/swift-html", .branch("main")),
-        .package(name: "CSS", url: "https://github.com/tikimcfee/swift-css", .branch("master")),
-        .package(name: "Down", url: "https://github.com/johnxnguyen/Down", .branch("master")),
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.59.1"),
+        .package(url: "https://github.com/tikimcfee/swift-html", branch: "main"),
+        .package(url: "https://github.com/tikimcfee/swift-css", branch: "master"),
+        .package(url: "https://github.com/johnxnguyen/Down", branch: "master"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.62.1"),
     ],
     targets: [
         .target(
             name: "StylesData",
             dependencies: [
-                "Html",
-                "CSS",
+                .product(name: "Html", package: "swift-html"),
+                .product(name: "CSS", package: "swift-css"),
             ]
         ),
         .target(
@@ -53,13 +53,13 @@ let package = Package(
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release)),
             ]
         ),
-        .target(
+        .executableTarget(
             name: "Run",
             dependencies: [
                 .target(name: "App"),
             ]
         ),
-        .target(
+        .executableTarget(
             name: "Generators",
             dependencies: [
                 .target(name: "StylesData"),

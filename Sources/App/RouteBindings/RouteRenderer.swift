@@ -7,9 +7,9 @@ public class VaporRouteRenderingContainer {
 
     let vaporApp: Vapor.Application
 
-    lazy var sharedRenderer: HTMLRenderer = HTMLRenderer(vaporApp: vaporApp)
-    lazy var articleLoader: VaporArticleLoader = VaporArticleLoader(subDirectoryName: "articles")
-    lazy var projectLoader: VaporArticleLoader = VaporArticleLoader(subDirectoryName: "projects")
+    lazy var sharedRenderer = HTMLRenderer(vaporApp: vaporApp)
+    lazy var articleLoader = VaporArticleLoader(subDirectoryName: "articles")
+    lazy var projectLoader = VaporArticleLoader(subDirectoryName: "projects")
 
     public init(vaporApp: Vapor.Application) {
         self.vaporApp = vaporApp
@@ -18,7 +18,8 @@ public class VaporRouteRenderingContainer {
     }
 
     func configureServer() {
-        generateAssets()
+        AppLog.trace("Skipping asset write, assuming new .css pattern")
+//        generateAssets()
     }
 
     func generateAssets() {

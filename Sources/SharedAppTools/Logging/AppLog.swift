@@ -36,7 +36,7 @@ public struct AppLog: CustomStringConvertible {
     }
     
     public var description: String {
-        "\(String(format: "%.8f", epochstamp))--\(level.rawValue)\t\(message)\n"
+        "[applog-\(level.rawValue):\(String(format: "%.8f", epochstamp))]\t\(message)"
     }
 }
 
