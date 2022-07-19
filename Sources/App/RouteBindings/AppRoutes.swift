@@ -37,7 +37,11 @@ enum AppRoutes: String, CustomStringConvertible {
         }
     }
     
-    static var displayRoutes: [AppRoutes] {
-        [.root, .articles, .projects, .privacyAndTerms]
+    static var headerRoutes: [AppRoutes] {
+        [.root, .articles, .projects]
+    }
+    
+    static var footerRoutes: [AppRoutes] {
+        [.privacyAndTerms]
     }
 }

@@ -48,20 +48,37 @@ struct HTMLRenderer {
 
     private func renderContentWith(builder: NodesBuilder) -> ChildOf<Tag.Html> {
         .body([
-            .div(attributes: [], [
-                .nav(attributes: [],
-                    .fragment(links)
-                ),
-                .div(
-                    attributes: [],
-                    .fragment(builder())
-                )
-            ])
+            .header(attributes: [],
+//                .nav(attributes: [],
+                     .fragment(navigationLinksHeader)
+//                )
+            ),
+            .div(attributes: [],
+                .fragment(builder())
+            ),
+            .footer(attributes: [],
+//                .nav(attributes: [],
+                     .fragment(navigationLinksFooter)
+//                )
+            ),
         ])
     }
 
-    private var links: [Node] {
-        let linkNodes = AppRoutes.displayRoutes.map {
+    private var navigationLinksHeader: [Node] {
+        let linkNodes = AppRoutes.headerRoutes.map {
+            Node.a(
+                attributes: [
+                    .href($0.absolute),
+                    .style(safe: "padding: 1rem")
+                ],
+                .span(.raw($0.description))
+            )
+        }
+        return linkNodes
+    }
+    
+    private var navigationLinksFooter: [Node] {
+        let linkNodes = AppRoutes.footerRoutes.map {
             Node.a(
                 attributes: [
                     .href($0.absolute),

@@ -69,19 +69,22 @@ ol,
 optgroup,
 option,
 output,
-p,
 pre,
 progress,
 ruby,
 section,
 table,
 textarea,
-ul,
 video {
 	/* Margins for most elements */
 	margin-bottom: 1rem;
     width: 100%;
     max-width: 700px;
+}
+
+ul,
+p {
+    margin-bottom: 1rem;
 }
 
 html,input,select,button {
@@ -194,16 +197,23 @@ header {
     
 	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 	margin: -2rem calc(0px - (50vw - 50%)) 2rem;
-	/* Shorthand for:
-	margin-top: -2rem;
-	margin-bottom: 2rem;
-	margin-left: calc(0px - (50vw - 50%));
-	margin-right: calc(0px - (50vw - 50%)); */
+}
+
+footer {
+    background: var(--nc-bg-2);
+    border-top: 1px solid var(--nc-bg-3);
+    border-bottom: 1px solid var(--nc-bg-3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+    
+    /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+    margin: 6rem calc(0px - (50vw - 50%)) -2rem;
 }
 
 nav {
-    background: var(--nc-bg-2);
-    border-bottom: 1px solid var(--nc-bg-3);
+/*    background: var(--nc-bg-2);*/
+/*    border-bottom: 1px solid var(--nc-bg-3);*/
     display: flex;
     flex-wrap: wrap;
 }
@@ -389,7 +399,7 @@ legend {
 table {
 	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
 	border-collapse: collapse;
-	width: 100%
+	width: 100%;
 }
 
 td,
