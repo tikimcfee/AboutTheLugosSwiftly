@@ -69,7 +69,6 @@ struct HTMLRenderer {
             Node.a(
                 attributes: [
                     .href($0.absolute),
-                    .style(safe: "padding: 1rem")
                 ],
                 .span(.raw($0.description))
             )
@@ -82,7 +81,6 @@ struct HTMLRenderer {
             Node.a(
                 attributes: [
                     .href($0.absolute),
-                    .style(safe: "padding: 1rem")
                 ],
                 .span(.raw($0.description))
             )

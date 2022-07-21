@@ -96,12 +96,15 @@ body {
 	/* Center body in page */
 	margin: 0 auto;
 	max-width: 750px;
-	padding: 2rem;
+	padding: 0rem 2rem 0rem 2rem;
 	border-radius: 6px;
 	overflow-x: hidden;
 	word-break: break-word;
 	overflow-wrap: break-word;
 	background: var(--nc-bg-1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 	/* Main body text */
 	color: var(--nc-tx-2);
@@ -191,24 +194,45 @@ blockquote *:last-child {
 header {
 	background: var(--nc-bg-2);
 	border-bottom: 1px solid var(--nc-bg-3);
-	padding: 2rem 1.5rem;
+	padding: 1rem 1.5rem;
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
     
 	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
-	margin: -2rem calc(0px - (50vw - 50%)) 2rem;
+	margin: 0rem calc(0px - (50vw - 50%)) 2rem;
 }
 
 footer {
     background: var(--nc-bg-2);
     border-top: 1px solid var(--nc-bg-3);
     border-bottom: 1px solid var(--nc-bg-3);
+
     padding: 1rem 1.5rem;
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
     
-    /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
-    margin: 6rem calc(0px - (50vw - 50%)) -2rem;
+    margin-top: auto;
+    margin-left: calc(0px - (50vw - 50%));
+    margin-right: calc(0px - (50vw - 50%));
+    
+    /* This sets the right and left margins to cancel out the body's margins.
+     It's width is still the same, but the background stretches across the page's width.
+     Shorthand for:
+     margin-top: -2rem;
+     margin-bottom: 2rem;
+     margin-left: calc(0px - (50vw - 50%));
+     margin-right: calc(0px - (50vw - 50%));
+     */
+/*    margin: 6rem calc(0px - (50vw - 50%)) -2rem;*/
+    
+}
+
+header > a, footer > a {
+    padding: 1rem;
+}
+
+header > :first-child, footer > :first-child {
+    padding-left: 0;
 }
 
 nav {
