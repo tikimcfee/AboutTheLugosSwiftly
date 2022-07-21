@@ -257,15 +257,6 @@ header h3 {
 	border-bottom: 0;
 }
 
-header > *:first-child {
-	margin-top: 0;
-	padding-top: 0;
-}
-
-header > *:last-child {
-	margin-bottom: 0;
-}
-
 a button,
 button,
 input[type="submit"],
