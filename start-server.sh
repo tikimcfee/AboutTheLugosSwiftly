@@ -1,1 +1,2 @@
-sudo .build/release/Run serve --env production --hostname 0.0.0.0 --port 8080
+#!/bin/bash
+.build/release/Run serve --env production
