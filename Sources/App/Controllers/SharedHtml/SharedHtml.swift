@@ -35,11 +35,13 @@ struct HTMLRenderer {
         """
         return doctype + render(.html(
             .head(
-                .meta(attributes: [
-                    .init("name", "viewport"),
-                    .content("width=device-width, initial-scale=1.0"),
-                    .charset(.utf8)
-                ]),
+                .meta(
+                    attributes: [
+                        .init("name", "viewport"),
+                        .content("width=device-width, initial-scale=1.0"),
+                        .charset(.utf8)
+                    ]
+                ),
                 Self.newCSSStylesheetLink
             ),
             renderContentWith(builder: builder)
@@ -48,18 +50,17 @@ struct HTMLRenderer {
 
     private func renderContentWith(builder: NodesBuilder) -> ChildOf<Tag.Html> {
         .body([
-            .header(attributes: [],
-//                .nav(attributes: [],
-                     .fragment(navigationLinksHeader)
-//                )
+            .header(
+                attributes: [],
+                .fragment(navigationLinksHeader)
             ),
-            .div(attributes: [],
+            .div(
+                attributes: [],
                 .fragment(builder())
             ),
-            .footer(attributes: [],
-//                .nav(attributes: [],
-                     .fragment(navigationLinksFooter)
-//                )
+            .footer(
+                attributes: [],
+                .fragment(navigationLinksFooter)
             ),
         ])
     }
@@ -77,7 +78,8 @@ struct HTMLRenderer {
     }
     
     private var navigationLinksFooter: [Node] {
-        let linkNodes = AppRoutes.footerRoutes.map {
+        var linkNodes = endCapLinks
+        var footerRoutes = AppRoutes.footerRoutes.map {
             Node.a(
                 attributes: [
                     .href($0.absolute),
@@ -85,6 +87,28 @@ struct HTMLRenderer {
                 .span(.raw($0.description))
             )
         }
+        linkNodes.append(contentsOf: footerRoutes)
         return linkNodes
     }
+    
+    private var endCapLinks: [Node] { [
+        Node.a(
+            attributes: [
+                .href("https://www.linkedin.com/in/ivanlugo/"),
+            ],
+            .span(.raw("📈 LinkedIn"))
+        ),
+        Node.a(
+            attributes: [
+                .href("https://twitter.com/FeeTiki"),
+            ],
+            .span(.raw("🐓 Twitter"))
+        ),
+        Node.a(
+            attributes: [
+                .href("https://calendly.com/thelugos/talk-with-ivan"),
+            ],
+            .span(.raw("📅 Chat Calendar"))
+        )
+    ] }
 }

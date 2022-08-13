@@ -9,6 +9,7 @@
 	--nc-bg-2: #F6F8FA;
 	--nc-bg-3: #E5E7EB;
 	--nc-lk-1: #0070F3;
+    --nc-lk-1-v: #0070F3;
 	--nc-lk-2: #0366D6;
 	--nc-lk-tx: #FFFFFF;
 	--nc-ac-1: #79FFE1;
@@ -17,10 +18,11 @@
 	/* Dark theme */
 	--nc-d-tx-1: #ffffff;
 	--nc-d-tx-2: #eeeeee;
-	--nc-d-bg-1: #000000;
+	--nc-d-bg-1: #151515;
 	--nc-d-bg-2: #111111;
 	--nc-d-bg-3: #222222;
-	--nc-d-lk-1: #3291FF;
+	--nc-d-lk-1: #9FCBFF;
+    --nc-d-lk-1-v: #85868e;
 	--nc-d-lk-2: #0070F3;
 	--nc-d-lk-tx: #FFFFFF;
 	--nc-d-ac-1: #7928CA;
@@ -35,6 +37,7 @@
 		--nc-bg-2: var(--nc-d-bg-2);
 		--nc-bg-3: var(--nc-d-bg-3);
 		--nc-lk-1: var(--nc-d-lk-1);
+        --nc-lk-1-v: var(--nc-d-lk-1-v);
 		--nc-lk-2: var(--nc-d-lk-2);
 		--nc-lk-tx: var(--nc--dlk-tx);
 		--nc-ac-1: var(--nc-d-ac-1);
@@ -167,6 +170,10 @@ a {
 	color: var(--nc-lk-1);
 }
 
+a:visited {
+    color: var(--nc-lk-1-v);
+}
+
 a:hover {
 	color: var(--nc-lk-2);
 }
@@ -192,9 +199,10 @@ blockquote *:last-child {
 }
 
 header {
-	background: var(--nc-bg-2);
+    background: var(--nc-bg-2);
 	border-bottom: 1px solid var(--nc-bg-3);
-	padding: 1rem 1.5rem;
+	
+/*    padding: 1rem 1.5rem;*/
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
     
@@ -202,37 +210,48 @@ header {
 	margin: 0rem calc(0px - (50vw - 50%)) 2rem;
 }
 
+header a:visited {
+    color: var(--nc-lk-1);
+}
+
+header > a {
+    padding: 1rem;
+    float: left;
+}
+
+footer > a {
+    padding: 1rem;
+    float: left;
+}
+
+header > :first-child, footer > :first-child {
+    padding-left: 0;
+}
+
 footer {
     background: var(--nc-bg-2);
     border-top: 1px solid var(--nc-bg-3);
     border-bottom: 1px solid var(--nc-bg-3);
 
-    padding: 1rem 1.5rem;
+/*    padding: 1rem 1.5rem;*/
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
     
     margin-top: auto;
     margin-left: calc(0px - (50vw - 50%));
     margin-right: calc(0px - (50vw - 50%));
-    
-    /* This sets the right and left margins to cancel out the body's margins.
-     It's width is still the same, but the background stretches across the page's width.
-     Shorthand for:
-     margin-top: -2rem;
-     margin-bottom: 2rem;
-     margin-left: calc(0px - (50vw - 50%));
-     margin-right: calc(0px - (50vw - 50%));
-     */
-/*    margin: 6rem calc(0px - (50vw - 50%)) -2rem;*/
-    
 }
 
-header > a, footer > a {
-    padding: 1rem;
+footer a:visited {
+    color: var(--nc-lk-1);
 }
 
-header > :first-child, footer > :first-child {
-    padding-left: 0;
+/*header a:last-child {*/
+/*    float: right;*/
+/*}*/
+
+footer a:last-child {
+    float: right;
 }
 
 nav {
