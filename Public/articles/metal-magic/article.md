@@ -17,7 +17,7 @@ The fun of all of this is that the original bottleneck of SceneKit is basically 
 
 Anyway, the musing here is mostly for a quick screencap of the app rendering itself - finally - at 60fps! That's every file, nothing filtered, all at once. This makes me smile.
 
-<img src="metal-magic/manychar.jpg" alt="the LookAtThat project full glyph set rendered front to back" style="max-width:40%"/>
+<img src="metal-magic/manychar.jpg" alt="the LookAtThat project full glyph set rendered front to back" style="max-width:100%"/>
 
 ## Next up
 
